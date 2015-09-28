@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sobeys_green">#46A147</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="hint_black">#66000000</color>
+    <color name="transparent_white">#B3ffffff</color>
+    <color name="green_button_pressed">#D3D3D3</color>
+    <color name="green_btn_disabled">#2f6c2f</color>
+    <color name="link_blue">#0000EE</color>
+    <color name="blue_btn_pressed">#4BFFFFFF</color>
+</resources>

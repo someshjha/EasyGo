@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btnLeftLink"
+        style="@style/HeaderLeftLinkText"
+        android:visibility="gone" />
+
+    <com.easygo.rbcdev.easygo.widgets.SquareImageButton
+        android:id="@+id/btnLeftIcon"
+        style="@style/HeaderIconButtonLeft"
+        android:visibility="gone"
+        custom:matchDimension="height" >
+    </com.easygo.rbcdev.easygo.widgets.SquareImageButton>
+
+    <TextView
+        android:id="@+id/lblTitle"
+        style="@style/HeaderTitle" >
+    </TextView>
+
+    <com.easygo.rbcdev.easygo.widgets.SquareImageButton
+        android:id="@+id/btnRightIcon"
+        style="@style/HeaderIconButtonRight"
+        android:visibility="gone"
+        custom:matchDimension="height" >
+    </com.easygo.rbcdev.easygo.widgets.SquareImageButton>
+
+    <Button
+        android:id="@+id/btnRightLink"
+        style="@style/HeaderPrimaryLinkText"
+        android:visibility="gone" />
+
+</merge>
