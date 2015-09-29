@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.easygo.rbcdev.easygo.models.Constants;
@@ -52,6 +53,15 @@ public class Login extends Activity {
     }
 
     private void initializeUI() {
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.main);
+
+        if(mLoginType.equals(Constants.SOBEYS_LOGIN_BUSINESS.toString())){
+            layout.setBackgroundResource(R.drawable.business_bg);
+        }
+        else {
+            layout.setBackgroundResource(R.drawable.produce_bg);
+        }
+
         mTxtTitle = (TextView) findViewById(R.id.loginTitle);
         mTxtRegister = (TextView) findViewById(R.id.txtLoginRegister);
         mSignIn = (Button) findViewById(R.id.btnSignIn);
