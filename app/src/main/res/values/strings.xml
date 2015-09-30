@@ -15,4 +15,10 @@
     <string name="txtForgotPassword">Forgot Password?</string>
     <string name="title_activity_shopping_home">ShoppingHome</string>
     <string name="title_activity_business_home">BusinessHome</string>
+    <string name="user_welcome">Easy Go - Welcome, </string>
+    <string name="shoppingOptions">Please choose from one of the options below:</string>
+    <string name="startShopping">Start Shopping</string>
+    <string name="loadShoppingCart">Load Shopping Cart</string>
+    <string name="checkOut">Checkout</string>
+    <string name="logOut">Log Out</string>
 </resources>
