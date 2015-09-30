@@ -7,43 +7,54 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.easygo.rbcdev.easygo.widgets.Header;
 
 
-public class ShoppingHome extends Activity {
+public class Settings extends Activity {
 
     private Header mHeader;
+    private Button mBtnProfile;
 
-    private View.OnClickListener settingsListener = new View.OnClickListener() {
+    private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-           goToSettings();
+            finish();
         }
     };
 
-    private void goToSettings() {
-        Intent i = new Intent(this,Settings.class);
+    private View.OnClickListener profileListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            goToProfile();
+        }
+    };
+
+    private void goToProfile() {
+        Intent i = new Intent(this,ProfileActivity.class);
         startActivity(i);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_home);
+        setContentView(R.layout.activity_settings);
         initializeUI();
     }
 
     private void initializeUI() {
         mHeader = (Header) findViewById(R.id.header);
-        mHeader.setBtnRightListener(settingsListener);
+        mHeader.setBtnLeftListener(backListener);
+        mBtnProfile = (Button) findViewById(R.id.btnProfile);
+        mBtnProfile.setOnClickListener(profileListener);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_shopping_home, menu);
+        getMenuInflater().inflate(R.menu.menu_settings, menu);
         return true;
     }
 

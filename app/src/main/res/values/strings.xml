@@ -21,4 +21,10 @@
     <string name="loadShoppingCart">Load Shopping Cart</string>
     <string name="checkOut">Checkout</string>
     <string name="logOut">Log Out</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="settings">Settings</string>
+    <string name="profile">My Profile</string>
+    <string name="history">Shopping History</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="viewCart">View Cart</string>
 </resources>
