@@ -1,12 +1,82 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.easygo.rbcdev.easygo.ProfileActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <com.easygo.rbcdev.easygo.widgets.Header
+        android:id="@+id/header"
+        style="@style/Header"
+        android:orientation="horizontal"
+        custom:headerTitle="@string/title_activity_profile" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        style="@style/EditTextUsername"
+        android:layout_below="@+id/header"
+        />
+
+    <EditText
+        android:id="@+id/txtUserEmail"
+        style="@style/EditTextUserEmail"
+        android:layout_below="@+id/txtUserName"/>
+
+    <EditText
+        android:id="@+id/txtUsePhone"
+        style="@style/EditTxtUserPhone"
+        android:layout_below="@+id/txtUserEmail"/>
+
+
+    <EditText
+        android:id="@+id/txtUserApt"
+        style="@style/EditTextUserApt"
+        android:layout_below="@+id/txtUsePhone"
+        />
+
+
+    <EditText
+        android:id="@+id/txtUserStreet"
+        style="@style/EditTextUsername"
+        android:layout_below="@+id/txtUserApt"/>
+
+    <EditText
+        android:id="@+id/txtUserPostCode"
+        style="@style/EditTextUsername"
+        android:layout_below="@+id/txtUserStreet"/>
+
+
+    <EditText
+        android:id="@+id/txtUserProvience"
+        style="@style/EditTextUsername"
+        android:layout_below="@+id/txtUserPostCode"
+        />
+
+    <EditText
+        android:id="@+id/txtUserCity"
+        style="@style/EditTextUsername"
+        android:layout_below="@+id/txtUserProvience"
+        />
+
+
+
+    <EditText
+        android:id="@+id/txtUserStore"
+        style="@style/EditTextUsername"
+        android:layout_below="@+id/txtUserCity"
+        />
+
+    <Button
+            android:id="@+id/btnSaveProfile"
+            style="@style/BusinessButton"
+            android:text="@string/btnSave"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="130dp" />
+
 
 </RelativeLayout>

@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">EasyGo</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
@@ -25,6 +24,24 @@
     <string name="settings">Settings</string>
     <string name="profile">My Profile</string>
     <string name="history">Shopping History</string>
-    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_profile">Profile</string>
     <string name="viewCart">View Cart</string>
+
+    <!--User Profile Starts-->
+
+    <string name="txtUserName">Enter UserName</string>
+    <string name="useremail_hint">Enter Email Address</string>
+    <string name="userPhone_hint">Enter Your Phone Number</string>
+    <string name="txtUserApt">Enter Apt Number</string>
+    <string name="txtUserProvience">Select a Provience</string>
+    <string name="txtUserStreet">Enter street number and name</string>
+    <string name="txtUserPostCode">Enter Postal Code</string>
+    <string name="txtUserCity">Enter City</string>
+    <string name="txtUserStore">Store Postal Code</string>
+    <string name="btnSave">Save Changes</string>
+
+
+    <!-- User Profile Ends -->
+
+
 </resources>
