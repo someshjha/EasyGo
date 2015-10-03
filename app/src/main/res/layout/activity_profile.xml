@@ -33,56 +33,50 @@
             android:orientation="vertical"
             custom:headerTitle="@string/title_activity_profile" />
 
-
-
         <TextView
             android:id="@+id/customerName"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Full Name"
             />
 
         <EditText
             android:id="@+id/txtUserName"
             style="@style/EditTextProfileUsername"
-            android:layout_below="@+id/customerName" />
+            />
 
         <TextView
             android:id="@+id/customerEmail"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Email Address"
-            android:layout_below="@+id/txtUserName"
-
             />
 
 
         <EditText
             android:id="@+id/txtUserEmail"
             style="@style/EditTextUserEmail"
-            android:layout_below="@+id/customerEmail"/>
+           />
         <TextView
             android:id="@+id/customerPhone"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Phone Number"
-            android:layout_below="@+id/customerName"
+
             />
 
         <EditText
             android:id="@+id/txtUsePhone"
             style="@style/EditTxtUserPhone"
-            android:layout_below="@+id/customerPhone"/>
+            />
 
         <TextView
             android:id="@+id/customerStreet"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Street Name"
-            android:layout_below="@+id/txtUsePhone"
             />
 
         <EditText
             android:id="@+id/txtUserStreet"
             style="@style/EditTextUserStreet"
             android:gravity="left"
-            android:layout_below="@+id/txtUsePhone"
             />
 
 
@@ -104,8 +98,9 @@
             <TextView
                 android:id="@+id/customerAptTextView"
                 style="@style/CommentText"
+                android:layout_width="0dp"
                 android:text="Apt"
-                android:layout_weight=".25"
+                android:layout_weight=".20"
                 android:layout_height="30dp" />
 
             <EditText
@@ -113,23 +108,24 @@
                 style="@style/EditTextUserApt"
                 android:gravity="left"
 
-                android:layout_weight=".30"
+                android:layout_weight=".35"
                 android:layout_height="30dp" />
 
 
             <TextView
                 android:id="@+id/customerZipCodeTextView"
                 style="@style/CommentText"
+                android:layout_width="0dp"
                 android:text="Zip"
 
-                android:layout_weight=".25"
+                android:layout_weight=".20"
                 android:layout_height="30dp" />
 
             <EditText
                 android:id="@+id/txtUserPostCode"
                 style="@style/EditTextUserPostCode"
                 android:gravity="left"
-                android:layout_weight=".25"
+                android:layout_weight="0.30"
                 android:layout_height="30dp" />
 
 
@@ -153,35 +149,36 @@
                 android:id="@+id/customerPostalCode"
                 style="@style/CommentText"
                 android:text="City"
-                android:layout_weight=".25"
+                android:layout_weight=".20"
                 android:layout_height="30dp" />
 
             <EditText
                 android:id="@+id/txtUserCity"
                 style="@style/EditTextUserCity"
                 android:gravity="left"
-                android:layout_weight="0.30"
-                android:layout_height="30dp" />
+                android:layout_weight=".30"
+                android:layout_height="30dp"
+               />
 
             <TextView
                 android:id="@+id/customerProvienceTextView"
                 style="@style/CommentText"
                 android:text="Provience"
-                android:layout_weight="0.25"
-                android:layout_width="wrap_content"
+                android:layout_weight=".27"
                 android:layout_height="30dp" />
 
             <Spinner
                 android:id="@+id/spinner1"
-
-                android:entries="@array/country_arrays"
+                android:entries="@array/provience_arrays"
                 style="@style/spinnerPayMethod"
-                android:layout_weight="0.25"
-                android:layout_height="30dp" />
+                android:layout_weight="0.23"
+                android:layout_height="30dp"
+                 />
 
 
 
         </LinearLayout>
+
 
 
 
@@ -228,27 +225,33 @@
     <LinearLayout
         android:id="@+id/getNewPassword"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/popUpChange">
 
-
+        <TextView
+            android:id="@+id/customerOldPassTextView"
+            style="@style/matchParentText"
+            android:text="Type Your Old Password"
+            />
 
         <EditText
         android:id="@+id/txtOldPassword"
         style="@style/EditTextOldPassword" />
-
+        <TextView
+            android:id="@+id/customerNewPassTextView"
+            style="@style/matchParentText"
+            android:text="Type Your New Password"
+            />
 
         <EditText
             android:id="@+id/txtNewPassword"
             style="@style/EditTextNewPassword" />
-
+        <TextView
+            android:id="@+id/customerReEnterPass"
+            style="@style/matchParentText"
+            android:text="Email Address"
+            />
 
         <EditText
             android:id="@+id/txtRePassword"
@@ -256,7 +259,7 @@
 
         <Button
             android:id="@+id/btnCreateNewPassword"
-            style="@style/newPasswordChanges"
+            style="@style/PaymentInformation"
             android:text="@string/btnChangePass"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -272,84 +275,82 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/getNewPassword"
-        android:visibility="gone">
+        android:layout_below="@+id/getNewPassword">
 
         <TextView
             android:id="@+id/txtPayMethod"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Select a pay method"/>
 
         <Spinner
             android:id="@+id/paymentMethod"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/pay_method"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:entries="@array/cardType_arrays"
             style="@style/spinnerPayMethod"
             />
 
         <TextView
             android:id="@+id/txtCardHolderName"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Name on Card"/>
 
         <EditText
             android:id="@+id/txtNmeOnCard"
             style="@style/EditTextNameOnCard"
-            android:layout_below="@+id/paymentMethod"/>
+            />
         <TextView
             android:id="@+id/txtCardNumberLabel"
-            style="@style/CommentText"
+            style="@style/matchParentText"
             android:text="Card Number"/>
 
 
         <EditText
             android:id="@+id/txtCardNumber"
             style="@style/EditTextCardNumber"
-            android:layout_below="@+id/txtNmeOnCard"/>
+            />
 
         <TextView
             android:id="@+id/txtCardExpireMonthAndYear"
-            style="@style/CommentText"
-            android:text="Expiry"
+            style="@style/matchParentText"
+            android:text="Expire Date"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/paymentInfoExpire"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymentInfo"
+        android:layout_marginBottom="20dp">
+
+        <Spinner
+            android:id="@+id/txtExpMonthTextView"
+            android:layout_weight=".30"
+            android:layout_height="30dp"
+            android:entries="@array/month_arrays"
+            android:layout_below="@+id/txtCardExpireMonthAndYear"
+            style="@style/spinner_style_expiry" />
+
+        <Spinner
+            android:id="@+id/txtExpYear"
+            android:layout_weight=".30"
+            android:layout_height="30dp"
+            android:entries="@array/year_arrays"
+            android:orientation="horizontal"
+            style="@style/spinner_style_expiry"
+
             />
 
-        <LinearLayout
-            android:id="@+id/paymentInfoExpire"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/getNewPassword">
-
-            <Spinner
-                android:id="@+id/txtExpMonth"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:entries="@array/Exp_Month"
-                android:layout_below="@+id/txtCardExpireMonthAndYear"
-
-                style="@style/spinner_style_expiry"
-
-                />
-
-            <Spinner
-                android:id="@+id/txtExpYear"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:entries="@array/Exp_Year"
-                android:orientation="horizontal"
-                style="@style/spinner_style_expiry"
-
-                />
-
-            <EditText
-                android:id="@+id/txtSecureCode"
-                style="@style/EditTextSecurityCode"
-                android:layout_below="@+id/txtSecureCode"/>
+        <EditText
+            android:id="@+id/txtSecureCode"
+            style="@style/EditTextSecurityCode"
+            android:layout_below="@+id/txtSecureCode"/>
 
 
 
-        </LinearLayout>
+    </LinearLayout>
 
 
 
@@ -362,12 +363,21 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="10dp"
-            android:layout_below="@+id/txtSecureCode"/>
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/paymentInfoExpire"
+            />
 
 
 
 
-    </LinearLayout>
+
+
+
+
+
+
+
+
 
 
 

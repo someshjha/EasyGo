@@ -20,20 +20,20 @@ public class ProfileActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        initialize();
+//        initialize();
     }
 
-    private void initialize(){
-
-        paymentInfo = (Button)findViewById(R.id.btnPaymentInfo);
-        paymentLayout = (LinearLayout)findViewById(R.id.paymentInfo);
-        paymentInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                paymentLayout.setVisibility(View.VISIBLE);
-            }
-        });
-    }
+//    private void initialize(){
+//
+//        paymentInfo = (Button)findViewById(R.id.btnPaymentInfo);
+//        paymentLayout = (LinearLayout)findViewById(R.id.paymentInfo);
+//        paymentInfo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                paymentLayout.setVisibility(View.VISIBLE);
+//            }
+//        });
+//    }
 
 
     @Override
