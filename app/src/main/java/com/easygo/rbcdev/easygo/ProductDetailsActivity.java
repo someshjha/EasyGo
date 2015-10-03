@@ -11,6 +11,8 @@ import com.easygo.rbcdev.easygo.widgets.SquareImageButton;
 
 public class ProductDetailsActivity extends Activity {
 
+    private SquareImageButton mBtnNutrition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,8 @@ public class ProductDetailsActivity extends Activity {
     }
 
     private void initializeUI() {
-
+        mBtnNutrition = (SquareImageButton) findViewById(R.id.btnNutritionIcon);
+        mBtnNutrition.setIcon(getResources().getDrawable(R.drawable.ic_nutrition));
     }
 
 

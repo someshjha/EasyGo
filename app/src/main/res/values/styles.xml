@@ -87,6 +87,22 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
+    <style name="EditTextValue">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:textColorHint">@color/hint_black</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:hint">@string/valueHint</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
     <style name="EditTextPassword">
         <item name="android:textSize">17sp</item>
         <item name="android:layout_width">match_parent</item>

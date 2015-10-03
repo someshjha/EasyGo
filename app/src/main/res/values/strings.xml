@@ -34,6 +34,11 @@
     <string name="unitsLabel">Units:</string>
     <string name="servingSize">Serving Size:</string>
     <string name="calories">Calories:</string>
+    <string name="weight">Weight (kg):</string>
+    <string name="quantity">Quantity:</string>
+    <string name="valueHint">Enter Value</string>
+    <string name="addToCart">Add To Cart</string>
+    <string name="RemoveFromCart">Remove From Cart</string>
     <!--User Profile Starts-->
 
     <string name="txtUserName">Enter UserName</string>
@@ -46,6 +51,7 @@
     <string name="txtUserCity">Enter City</string>
     <string name="txtUserStore">Store Postal Code</string>
     <string name="btnSave">Save Changes</string>
+    <string name="dailyValues">Daily Values</string>
 
 
     <!-- User Profile Ends --></resources>
