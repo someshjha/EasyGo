@@ -27,4 +27,12 @@
     <string name="history">Shopping History</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="viewCart">View Cart</string>
+    <string name="title_activity_shopping_items">ShoppingItemsActivity</string>
+    <string name="productList">Product List</string>
+    <string name="title_activity_product_details">ProductDetailsActivity</string>
+    <string name="priceLabel">Price:</string>
+    <string name="categoryLabel">Category:</string>
+    <string name="unitsLabel">Units:</string>
+    <string name="servingSize">Serving Size:</string>
+    <string name="calories">Calories:</string>
 </resources>
