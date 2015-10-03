@@ -26,97 +26,32 @@
     <string name="history">Shopping History</string>
     <string name="title_activity_profile">Profile</string>
     <string name="viewCart">View Cart</string>
-
+    <string name="title_activity_shopping_items">ShoppingItemsActivity</string>
+    <string name="productList">Product List</string>
+    <string name="title_activity_product_details">ProductDetailsActivity</string>
+    <string name="priceLabel">Price:</string>
+    <string name="categoryLabel">Category:</string>
+    <string name="unitsLabel">Units:</string>
+    <string name="servingSize">Serving Size:</string>
+    <string name="calories">Calories:</string>
+    <string name="weight">Weight (kg):</string>
+    <string name="quantity">Quantity:</string>
+    <string name="valueHint">Enter Value</string>
+    <string name="addToCart">Add To Cart</string>
+    <string name="RemoveFromCart">Remove From Cart</string>
     <!--User Profile Starts-->
 
-    <string name="txtUserPersonalInfo">Personal Information</string>
-    <string name="txtUserName">User Name</string>
-    <string name="useremail_hint">Email Address</string>
-    <string name="userPhone_hint">Your Phone Number</string>
-    <string name="txtUserApt">Apartment</string>
-    <string name="txtUserProvience">Provience</string>
-    <string name="txtUserStreet">Street</string>
-    <string name="txtUserPostCode">Zip Code</string>
-    <string name="txtUserCity">City</string>
-    <string name="txtUserStore">Store Code</string>
+    <string name="txtUserName">Enter UserName</string>
+    <string name="useremail_hint">Enter Email Address</string>
+    <string name="userPhone_hint">Enter Your Phone Number</string>
+    <string name="txtUserApt">Enter Apt Number</string>
+    <string name="txtUserProvience">Select a Provience</string>
+    <string name="txtUserStreet">Enter street number and name</string>
+    <string name="txtUserPostCode">Enter Postal Code</string>
+    <string name="txtUserCity">Enter City</string>
+    <string name="txtUserStore">Store Postal Code</string>
     <string name="btnSave">Save Changes</string>
-    <string name="btnChangePass">Update Password</string>
-    <string name="btnPaymentInfo">Payment Information</string>
+    <string name="dailyValues">Daily Values</string>
 
 
-
-    <string name="password_hint_old">Enter Old Password</string>
-    <string name="password_hint_new">Enter New Password</string>
-    <string name="password_hint_reNew">Re Enter New Password</string>
-
-
-    <string name="payment_card_number_hint">Enter Card Number</string>
-    <string name="payment_Card_Name_hint">Enter Name on Card</string>
-    <string name="payment_security_Code_hint">Security Code</string>
-
-
-
-
-
-
-
-    <string-array name="country_arrays">
-        <item>Provience</item>
-        <item>AB</item>
-        <item>BC</item>
-        <item>MB</item>
-        <item>NB</item>
-        <item>NL</item>
-        <item>NT</item>
-        <item>NU</item>
-        <item>NS</item>
-        <item>ON</item>
-        <item>PE</item>
-        <item>SK</item>
-        <item>YT</item>
-    </string-array>
-
-    <string-array name="pay_method">
-        <item>Pay By</item>
-        <item>Visa</item>
-        <item>Mastercard</item>
-        <item>American Express</item>
-        <item>Capital One</item>
-    </string-array>
-
-    <!--Expire Month-->
-    <string-array name="Exp_Month">
-        <item>Jan</item>
-        <item>Feb</item>
-        <item>Mar</item>
-        <item>April</item>
-        <item>May</item>
-        <item>June</item>
-        <item>July</item>
-        <item>Aug</item>
-        <item>Sep</item>
-        <item>Oct</item>
-        <item>Nov</item>
-        <item>Dec</item>
-    </string-array>
-
-    <!--Expire Year-->
-    <string-array name="Exp_Year">
-        <item>2015</item>
-        <item>2016</item>
-        <item>2017</item>
-        <item>2018</item>
-        <item>2019</item>
-        <item>2020</item>
-        <item>2021</item>
-        <item>2022</item>
-        <item>2023</item>
-        <item>2024</item>
-        <item>2025</item>
-        <item>2026</item>
-    </string-array>
-
-    <!-- User Profile Ends -->
-
-
-</resources>
+    <!-- User Profile Ends --></resources>

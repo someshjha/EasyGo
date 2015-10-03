@@ -14,4 +14,10 @@
         <attr name="rightIcon" format="integer" />
         <attr name="headerTitle" format="string" />
     </declare-styleable>
+    <declare-styleable name="CustomField">
+        <attr name="label" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="CustomEditText">
+        <attr name="txtLabel" format="string"/>
+    </declare-styleable>
 </resources>
