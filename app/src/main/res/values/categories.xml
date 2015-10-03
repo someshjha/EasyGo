@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="items">
+        <item>All Categories</item>
+        <item>Bulk</item>
+        <item>Commercial Bakery</item>
+        <item>Dairy</item>
+        <item>Deli</item>
+        <item>Floral</item>
+        <item>Frozen Grocery</item>
+        <item>General Merchandise</item>
+        <item>Grocery</item>
+        <item>HABA</item>
+        <item>HealthCare</item>
+        <item>Home Meal Replacement</item>
+        <item>Instore Bakery</item>
+        <item>Lottery</item>
+        <item>Meat</item>
+        <item>Pastry</item>
+        <item>Produce</item>
+        <item>Seafood</item>
+        <item>Tobacco</item>
+    </string-array>
+</resources>
