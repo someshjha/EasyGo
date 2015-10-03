@@ -6,19 +6,22 @@
     android:background="@drawable/produce_bg_alt"
     tools:context="com.easygo.rbcdev.easygo.ShoppingHome">
 
+    <com.easygo.rbcdev.easygo.widgets.Header
+        android:id="@+id/header"
+        style="@style/Header"
+        android:orientation="horizontal"
+        custom:headerTitle="@string/productList"
+        custom:rightIcon="@drawable/icon_settings"
+        />
+
     <LinearLayout
+        android:layout_below="@id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:id="@+id/linearLayout"
+        android:background="@drawable/white_rounded_background"
         android:orientation="vertical">
-
-        <com.easygo.rbcdev.easygo.widgets.Header
-            android:id="@+id/header"
-            style="@style/Header"
-            android:orientation="horizontal"
-            custom:headerTitle="@string/productList"
-            custom:rightIcon="@drawable/icon_settings"
-            />
 
         <!--<Spinner-->
             <!--android:layout_width="match_parent"-->
@@ -29,17 +32,23 @@
 
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/CategoryList"
-            android:layout_below="@+id/spinner"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"/>
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/lstItems" />
+        <ScrollView
+            android:id="@+id/itemScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lstItems" />
+        </ScrollView>
 
         <Button
+            android:layout_below="@id/linearLayout"
             android:id="@+id/btnViewCartItems"
             style="@style/BusinessButton"
             android:text="@string/viewCart"
