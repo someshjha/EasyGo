@@ -1,152 +1,161 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/produce_bg_alt"
-    tools:context="com.easygo.rbcdev.easygo.Settings">
+    android:fillViewport="true"
+    android:stackFromBottom="true"
+    android:transcriptMode="alwaysScroll" >
 
-    <com.easygo.rbcdev.easygo.widgets.Header
-        android:id="@+id/header"
-        style="@style/Header"
-        android:orientation="horizontal"
-        custom:headerTitle="@string/productDetails"
-        />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/white_rounded_background"
-        android:layout_below="@+id/header"
-        android:layout_margin="10dp"
-        android:orientation="vertical" >
+        android:background="@drawable/produce_bg_alt"
+        tools:context="com.easygo.rbcdev.easygo.Settings">
 
-        <TextView
-            android:id="@+id/productDetailsTitle"
-            android:text="Product Title Here"
-            android:textSize="25sp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:src="@drawable/icon_item_placeholder"/>
-
-        <com.easygo.rbcdev.easygo.widgets.CustomField
-            android:id="@+id/itemPriceField"
-            style="@style/ItemField"
-            custom:label="@string/priceLabel" />
-
-        <com.easygo.rbcdev.easygo.widgets.CustomField
-            android:id="@+id/itemCategoryField"
-            style="@style/ItemField"
-            custom:label="@string/categoryLabel" />
-
-        <com.easygo.rbcdev.easygo.widgets.CustomField
-            android:id="@+id/itemUnitField"
-            style="@style/ItemField"
-            custom:label="@string/unitsLabel" />
-
-        <View
-            android:id="@+id/productInfoDivide"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/list_divider"/>
-
-        <TextView
-            android:id="@+id/productDailyValues"
-            android:text="@string/dailyValues"
-            android:textSize="22sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:layout_gravity="center"
-            android:textColor="@color/sobeys_green"
-            android:fontFamily="sans-serif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <com.easygo.rbcdev.easygo.widgets.Header
+            android:id="@+id/header"
+            style="@style/Header"
+            android:orientation="horizontal"
+            custom:headerTitle="@string/productDetails"
+            />
 
         <LinearLayout
-            android:id="@+id/dailyValues"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:orientation="vertical">
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/itemServingSizeField"
-                    style="@style/ItemField"
-                    custom:label="@string/servingSize" />
-
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/itemCalories"
-                    style="@style/ItemField"
-                    custom:label="@string/calories" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2">
-                <com.easygo.rbcdev.easygo.widgets.SquareImageButton
-                    android:id="@+id/btnNutritionIcon"
-                    style="@style/HeaderIconButtonLeft"
-                    custom:matchDimension="height" >
-                </com.easygo.rbcdev.easygo.widgets.SquareImageButton>
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:id="@+id/productDailyValuesDivide"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_rounded_background"
+            android:layout_below="@+id/header"
             android:layout_margin="10dp"
-            android:background="@drawable/list_divider"/>
+            android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            <TextView
+                android:id="@+id/productDetailsTitle"
+                android:text="Product Title Here"
+                android:textSize="25sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-            <com.easygo.rbcdev.easygo.widgets.CustomEditText
-                android:layout_margin="10dp"
-                android:id="@+id/productFieldWeight"
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/icon_item_placeholder"/>
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/itemPriceField"
+                style="@style/ItemField"
+                custom:label="@string/priceLabel" />
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/itemCategoryField"
+                style="@style/ItemField"
+                custom:label="@string/categoryLabel" />
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/itemUnitField"
+                style="@style/ItemField"
+                custom:label="@string/unitsLabel" />
+
+            <View
+                android:id="@+id/productInfoDivide"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                custom:txtLabel="@string/weight">
-            </com.easygo.rbcdev.easygo.widgets.CustomEditText>
-
-            <com.easygo.rbcdev.easygo.widgets.CustomEditText
-                android:layout_margin="10dp"
-                android:id="@+id/productFieldQuantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                custom:txtLabel="@string/weight"
-                android:visibility="gone">
-            </com.easygo.rbcdev.easygo.widgets.CustomEditText>
-
-            <Button
-                android:id="@+id/btnAddToCart"
-                style="@style/BusinessButton"
-                android:text="@string/addToCart"
+                android:layout_height="1dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                />
+                android:background="@drawable/list_divider"/>
+
+            <TextView
+                android:id="@+id/productDailyValues"
+                android:text="@string/dailyValues"
+                android:textSize="22sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                android:textColor="@color/sobeys_green"
+                android:fontFamily="sans-serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/dailyValues"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.easygo.rbcdev.easygo.widgets.CustomField
+                        android:id="@+id/itemServingSizeField"
+                        style="@style/ItemField"
+                        custom:label="@string/servingSize" />
+
+                    <com.easygo.rbcdev.easygo.widgets.CustomField
+                        android:id="@+id/itemCalories"
+                        style="@style/ItemField"
+                        custom:label="@string/calories" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2">
+                    <com.easygo.rbcdev.easygo.widgets.SquareImageButton
+                        android:id="@+id/btnNutritionIcon"
+                        style="@style/HeaderIconButtonLeft"
+                        custom:matchDimension="height" >
+                    </com.easygo.rbcdev.easygo.widgets.SquareImageButton>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/productDailyValuesDivide"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/list_divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.easygo.rbcdev.easygo.widgets.CustomEditText
+                    android:layout_margin="10dp"
+                    android:id="@+id/productFieldWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:txtLabel="@string/weight">
+                </com.easygo.rbcdev.easygo.widgets.CustomEditText>
+
+                <com.easygo.rbcdev.easygo.widgets.CustomEditText
+                    android:layout_margin="10dp"
+                    android:id="@+id/productFieldQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:txtLabel="@string/weight"
+                    android:visibility="gone">
+                </com.easygo.rbcdev.easygo.widgets.CustomEditText>
+
+                <Button
+                    android:id="@+id/btnAddToCart"
+                    style="@style/BusinessButton"
+                    android:text="@string/addToCart"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
