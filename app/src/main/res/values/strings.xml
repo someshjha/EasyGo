@@ -54,26 +54,16 @@
 
     <!--profile-->
 
-    <string name="profileButtonSave">Save Changes</string>
+    <string name="profileInfoButtonSave">Save Personal Info</string>
+    <string name="profileCardInfoButtonSave">Save Card Info</string>
+    <string name="profileChangePassButtonSave">Changes Password</string>
+
 
     <!--profile-->
 
 
     <string name="dailyValues">Daily Values</string>
 
-    <string name="btnChangePass">Update Password</string>
-    <string name="btnPaymentInfo">Payment Information</string>
-
-
-
-    <string name="password_hint_old">Enter Old Password</string>
-    <string name="password_hint_new">Enter New Password</string>
-    <string name="password_hint_reNew">Re Enter New Password</string>
-
-
-    <string name="payment_card_number_hint">Enter Card Number</string>
-    <string name="payment_Card_Name_hint">Enter Name on Card</string>
-    <string name="payment_security_Code_hint">Security Code</string>
 
     <string-array name="country_arrays">
         <item>Provience</item>

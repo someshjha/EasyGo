@@ -20,8 +20,7 @@
             android:id="@+id/header"
             style="@style/Header"
             android:orientation="horizontal"
-            custom:headerTitle="Profile"
-            />
+            custom:headerTitle="Profile" />
 
         <LinearLayout
             android:id="@+id/personalInformation"
@@ -30,7 +29,8 @@
             android:background="@drawable/white_rounded_background"
             android:layout_below="@+id/header"
             android:layout_margin="10dp"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:focusable="false">
 
             <TextView
                 android:id="@+id/personalInfoSubTitle"
@@ -44,6 +44,7 @@
                 android:fontFamily="sans-serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
             <View
                 android:id="@+id/personalInfo_Divider"
                 android:layout_width="match_parent"
@@ -52,112 +53,100 @@
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/list_divider"/>
 
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/profileCommentName"
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentName"
+                style="@style/profileCommentFields"
+                custom:label="Full Name" />
+            <EditText
+                android:id="@+id/customerNameEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Full Name" />
+
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                    android:id="@+id/profileCommentEmail"
                     style="@style/profileCommentFields"
-                    custom:label="Full Name" />
-                <EditText
-                    android:id="@+id/customerNameEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter Full Name"
-                    />
+                    custom:label="Email Address" />
+            <EditText
+                android:id="@+id/customerEmailEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Email Address" />
 
 
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                        android:id="@+id/profileCommentEmail"
-                        style="@style/profileCommentFields"
-                        custom:label="Email Address" />
-                <EditText
-                    android:id="@+id/customerEmailEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter Email Address"
-                    />
-
-
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                        android:id="@+id/profileCommentPhone"
-                        style="@style/profileCommentFields"
-                        custom:label="Phone Number" />
-                <EditText
-                    android:id="@+id/customerPhoneEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter Phone Number"
-                    />
-
-
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                        android:id="@+id/profileCommentStreet"
-                        style="@style/profileCommentFields"
-                        custom:label="Street Name" />
-
-                <EditText
-                    android:id="@+id/customerStreetEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter Street Name"
-                    />
-
-
-
-
-
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/profileCommentApt"
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                    android:id="@+id/profileCommentPhone"
                     style="@style/profileCommentFields"
-                    custom:label="Apt"
-                  />
-                <EditText
-                    android:id="@+id/customerAptEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter Apartment Number"
-
-                    />
+                    custom:label="Phone Number" />
+            <EditText
+                android:id="@+id/customerPhoneEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Phone Number" />
 
 
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/profileCommentZip"
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                    android:id="@+id/profileCommentStreet"
                     style="@style/profileCommentFields"
-                    custom:label="Postal Code"
-                    android:layout_height=".25dp"/>
-                <EditText
-                    android:id="@+id/customerZipEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter Postal Code"
+                    custom:label="Street Name" />
 
-                    />
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/profileCommentCity"
-                    style="@style/profileCommentFields"
-                    custom:label="City"
-                   />
-                <EditText
-                    android:id="@+id/customerCityEditText"
-                    style="@style/ProfileEditTextFields"
-                    android:hint="Enter City Name"
+            <EditText
+                android:id="@+id/customerStreetEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Street Name" />
 
-                    />
-                <com.easygo.rbcdev.easygo.widgets.CustomField
-                    android:id="@+id/profileCommentProvince"
-                    style="@style/profileCommentFields"
-                    custom:label="Select Province"
-                  />
-                <EditText
-                    android:id="@+id/profileComment"
-                    style="@style/ProfileEditTextFields"
-                    android:hint=""
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentApt"
+                style="@style/profileCommentFields"
+                custom:label="Apt" />
 
-                    />
+            <EditText
+                android:id="@+id/customerAptEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Apartment Number" />
+
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentZip"
+                style="@style/profileCommentFields"
+                custom:label="Postal Code"
+                android:layout_height=".25dp"/>
+
+            <EditText
+                android:id="@+id/customerZipEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Postal Code" />
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentCity"
+                style="@style/profileCommentFields"
+                custom:label="City" />
+
+            <EditText
+                android:id="@+id/customerCityEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter City Name" />
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentProvince"
+                style="@style/profileCommentFields"
+                custom:label="Select Province" />
+
+            <EditText
+                android:id="@+id/profileComment"
+                style="@style/ProfileEditTextFields"
+                android:hint="" />
 
 
             <Button
                 android:id="@+id/btnSavePersonalInfo"
                 style="@style/ProfileButton"
-                android:text="@string/profileButtonSave"
+                android:text="@string/profileInfoButtonSave"
                 android:layout_margin="15dp" />
 
 
-            </LinearLayout>
+        </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/creditCardInformation"
+            android:id="@+id/ChangePasswordInformation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/white_rounded_background"
@@ -175,7 +164,90 @@
                 android:background="@drawable/list_divider"/>
 
             <TextView
-                android:id="@+id/changePasswordTitle"
+                android:id="@+id/paymentInfoTitle"
+                android:text="Change Password"
+                android:textSize="25sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/creditCard_DividerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/list_divider"/>
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileOldPassComment"
+                style="@style/profileCommentFields"
+                custom:label="Old Password" />
+
+            <EditText
+                android:id="@+id/customerOldPassEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Old Password" />
+
+
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileNewPassComment"
+                style="@style/profileCommentFields"
+                custom:label="New Password" />
+
+            <EditText
+                android:id="@+id/customerNewPasswordEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter New Password" />
+
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileReEnterPassComment"
+                style="@style/profileCommentFields"
+                custom:label="Re-Type Password" />
+
+            <EditText
+                android:id="@+id/customerReEnterPassEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter New Password Again " />
+
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                style="@style/ProfileButton"
+                android:text="@string/profileChangePassButtonSave"
+                android:layout_margin="15dp" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/creditCardInformation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_rounded_background"
+            android:layout_below="@+id/ChangePasswordInformation"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+
+            <View
+                android:id="@+id/changePassword_DividerTop"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/list_divider"/>
+
+            <TextView
+                android:id="@+id/ChangePasswordTitle"
                 android:text="Payment Information"
                 android:textSize="25sp"
                 android:layout_marginTop="15dp"
@@ -195,22 +267,71 @@
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/list_divider"/>
 
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentCardType"
+                style="@style/profileCommentFields"
+                custom:label="Method of Payment" />
+
+            <EditText
+                android:id="@+id/customerCardTypeEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Select a method" />
 
 
 
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentNameOnCard"
+                style="@style/profileCommentFields"
+                custom:label="Name on Card" />
 
+            <EditText
+                android:id="@+id/customerNameOnCardEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Full Name on Card" />
+
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentCardNumber"
+                style="@style/profileCommentFields"
+                custom:label="Card Number" />
+
+            <EditText
+                android:id="@+id/customerCardNumberEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter Card Number" />
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentExpireMonthYear"
+                style="@style/profileCommentFields"
+                custom:label="Expire Month/Year" />
+
+            <EditText
+                android:id="@+id/customerExpireEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="MM/YY" />
+
+            <com.easygo.rbcdev.easygo.widgets.CustomField
+                android:id="@+id/profileCommentSecurityCode"
+                style="@style/profileCommentFields"
+                custom:label="Security Code"
+                />
+            <EditText
+                android:id="@+id/customerCardSecurityEditText"
+                style="@style/ProfileEditTextFields"
+                android:hint="Enter 3 digit code" />
+
+            <Button
+                android:id="@+id/btnSaveCardInfo"
+                style="@style/ProfileButton"
+                android:text="@string/profileCardInfoButtonSave"
+                android:layout_margin="15dp" />
 
 
 
         </LinearLayout>
 
 
-
-
-
     </RelativeLayout>
-
-
 
 
 </ScrollView>
