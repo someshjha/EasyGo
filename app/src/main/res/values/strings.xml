@@ -133,6 +133,8 @@
     <string name="tax">Tax:</string>
     <string name="total">Total:</string>
     <string name="submitOrder">Submit Order</string>
+    <string name="title_activity_shopping_history">ShoppingHIstoryActivity</string>
+    <string name="myShoppingHistory">Your Shopping History</string>
 
     <!-- User Profile Ends -->
 
