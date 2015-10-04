@@ -124,6 +124,14 @@
         <item>2025</item>
         <item>2026</item>
     </string-array>
+    <string name="title_activity_cart">CartActivity</string>
+    <string name="productDetails">Product Details</string>
+    <string name="shoppingCart">Shopping Cart</string>
+    <string name="yourShoppingCart">Your Shopping Cart</string>
+    <string name="subTotal">Sub-Total:</string>
+    <string name="tax">Tax:</string>
+    <string name="total">Total:</string>
+    <string name="submitOrder">Submit Order</string>
 
     <!-- User Profile Ends -->
 

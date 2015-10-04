@@ -60,8 +60,11 @@
         </activity>
         <activity
             android:name=".ProfileActivity"
-            android:label="@string/title_activity_profile" >
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
         </activity>
+
         <activity
             android:name=".ShoppingItemsActivity"
             android:label="@string/title_activity_shopping_items"
@@ -71,6 +74,12 @@
         <activity
             android:name=".ProductDetailsActivity"
             android:label="@string/title_activity_product_details"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".CartActivity"
+            android:label="@string/title_activity_cart"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar">
         </activity>

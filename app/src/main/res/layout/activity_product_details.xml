@@ -10,7 +10,7 @@
         android:id="@+id/header"
         style="@style/Header"
         android:orientation="horizontal"
-        custom:headerTitle="Product Details"
+        custom:headerTitle="@string/productDetails"
         />
 
     <LinearLayout
