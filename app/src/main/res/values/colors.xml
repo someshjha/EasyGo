@@ -10,4 +10,5 @@
     <color name="green_btn_disabled">#2f6c2f</color>
     <color name="link_blue">#0000EE</color>
     <color name="blue_btn_pressed">#4BFFFFFF</color>
+    <color name="background_business">#73B2DFDB</color>
 </resources>

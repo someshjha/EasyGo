@@ -39,6 +39,7 @@
     <string name="valueHint">Enter Value</string>
     <string name="addToCart">Add To Cart</string>
     <string name="RemoveFromCart">Remove From Cart</string>
+
     <!--User Profile Starts-->
 
     <string name="txtUserPersonalInfo">Personal Information</string>
@@ -70,7 +71,7 @@
     <string name="payment_security_Code_hint">Security Code</string>
 
     <string-array name="country_arrays">
-        <item>Provience</item>
+        <item>Province</item>
         <item>AB</item>
         <item>BC</item>
         <item>MB</item>
