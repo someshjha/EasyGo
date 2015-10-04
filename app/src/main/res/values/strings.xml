@@ -42,8 +42,8 @@
     <!--User Profile Starts-->
 
     <string name="txtUserPersonalInfo">Personal Information</string>
-    <string name="txtUserName">User Name</string>
-    <string name="useremail_hint">Email Address</string>
+    <string name="fullName">User Name</string>
+    <string name="emailAddress">Email Address</string>
     <string name="userPhone_hint">Your Phone Number</string>
     <string name="txtUserApt">Apartment</string>
     <string name="txtUserProvience">Provience</string>
@@ -52,7 +52,13 @@
     <string name="txtUserCity">City</string>
     <string name="txtUserStore">Store Code</string>
 
-    <string name="btnSave">Save Changes</string>
+    <!--profile-->
+
+    <string name="profileButtonSave">Save Changes</string>
+
+    <!--profile-->
+
+
     <string name="dailyValues">Daily Values</string>
 
     <string name="btnChangePass">Update Password</string>
@@ -125,6 +131,7 @@
         <item>2026</item>
     </string-array>
     <string name="title_activity_activity_shopping_history">activity_shoppingHistory</string>
+    <string name="title_activity_shopping_cart">shopping_cart</string>
 
     <!-- User Profile Ends -->
 
