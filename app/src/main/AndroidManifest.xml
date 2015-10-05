@@ -91,6 +91,14 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+        <activity
+            android:name=".BusinessEnd.EmployeeEvaluation"
+            android:label="@string/title_activity_employee_evaluation" >
+        </activity>
+        <activity
+            android:name=".BusinessEnd.LeaveRequest"
+            android:label="@string/title_activity_leave_request" >
+        </activity>
     </application>
 
 </manifest>

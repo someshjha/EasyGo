@@ -39,7 +39,6 @@
     <string name="valueHint">Enter Value</string>
     <string name="addToCart">Add To Cart</string>
     <string name="RemoveFromCart">Remove From Cart</string>
-
     <!--User Profile Starts-->
 
     <string name="txtUserPersonalInfo">Personal Information</string>
@@ -54,10 +53,11 @@
     <string name="txtUserStore">Store Code</string>
 
     <string name="btnSave">Save Changes</string>
-    <string name="dailyValues">Daily Values</string>
 
-    <string name="btnChangePass">Update Password</string>
-    <string name="btnPaymentInfo">Payment Information</string>
+
+    <string name="profileInfoButtonSave">Save Personal Info</string>
+    <string name="profileCardInfoButtonSave">Save Card Info</string>
+    <string name="profileChangePassButtonSave">Changes Password</string>
 
 
 
@@ -70,20 +70,23 @@
     <string name="payment_Card_Name_hint">Enter Name on Card</string>
     <string name="payment_security_Code_hint">Security Code</string>
 
-    <string-array name="country_arrays">
-        <item>Province</item>
-        <item>AB</item>
-        <item>BC</item>
-        <item>MB</item>
-        <item>NB</item>
-        <item>NL</item>
-        <item>NT</item>
-        <item>NU</item>
-        <item>NS</item>
-        <item>ON</item>
-        <item>PE</item>
-        <item>SK</item>
-        <item>YT</item>
+
+    <string-array name="province">
+        <item>Select Province</item>
+        <item>Alberta</item>
+        <item>Nunavut</item>
+        <item>Northwest Territories</item>
+        <item>Ontario</item>
+        <item>British Columbia</item>
+        <item>Saskatchewan</item>
+        <item>Manitoba</item>
+        <item>Newfoundland and Labrador</item>
+        <item>New Brunswick</item>
+        <item>Nova Scotia</item>
+        <item>Prince Edward Island</item>
+        <item>Quebec</item>
+        <item>Yukon</item>
+
     </string-array>
 
     <string-array name="pay_method">
@@ -135,6 +138,8 @@
     <string name="submitOrder">Submit Order</string>
     <string name="title_activity_shopping_history">ShoppingHIstoryActivity</string>
     <string name="myShoppingHistory">Your Shopping History</string>
+    <string name="title_activity_employee_evaluation">EmployeeEvaluation</string>
+    <string name="title_activity_leave_request">LeaveRequest</string>
 
     <!-- User Profile Ends -->
 
