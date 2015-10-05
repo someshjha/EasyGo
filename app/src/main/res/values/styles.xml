@@ -271,11 +271,22 @@
         <item name="android:layout_marginEnd">15dp</item>
         <item name="android:layout_marginBottom">5dp</item>
         <item name="android:textSize">17sp</item>
-        <item name="android:textColor">@color/black</item>
-
-        profileCommentFields
 
     </style>
+
+    <style name="profileSpinner">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textSize">17sp</item>
+
+    </style>
+
+
+
 
     <!--Profile Styles Ends-->
 
