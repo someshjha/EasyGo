@@ -312,7 +312,7 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    
+
         <style name="EditTextUserStreet">
             <item name="android:textSize">17sp</item>
             <item name="android:layout_width">match_parent</item>
@@ -327,7 +327,7 @@
             <item name="android:background">@color/white</item>
             <item name="android:fontFamily">sans-serif</item>
         </style>
-    
+
         <style name="EditTextUserProvience">
             <item name="android:textSize">17sp</item>
             <!--<item name="android:layout_width">80dp</item>-->
@@ -342,7 +342,7 @@
             <item name="android:background">@color/white</item>
             <item name="android:fontFamily">sans-serif</item>
         </style>
-    
+
         <style name="EditTextUserPostCode">
             <item name="android:textSize">17sp</item>
             <item name="android:layout_width">80dp</item>
@@ -357,7 +357,7 @@
             <item name="android:background">@color/white</item>
             <item name="android:fontFamily">sans-serif</item>
         </style>
-    
+
         <style name="EditTextUserCity">
             <item name="android:textSize">17sp</item>
             <!--<item name="android:layout_width">80dp</item>-->
@@ -372,8 +372,8 @@
             <item name="android:background">@color/white</item>
             <item name="android:fontFamily">sans-serif</item>
         </style>
-    
-    
+
+
         <style name="SaveChanges">
             <item name="android:textSize">17sp</item>
             <item name="android:textStyle">bold</item>
@@ -385,9 +385,9 @@
             <item name="android:textAllCaps">false</item>
             <item name="android:layout_marginBottom">15dp</item>
             <item name="android:layout_marginTop">10dp</item>
-    
+
         </style>
-    
+
         <style name="PasswordChanges">
             <item name="android:textSize">15sp</item>
             <item name="android:textStyle">bold</item>
@@ -398,7 +398,7 @@
             <item name="android:fontFamily">sans-serif</item>
             <item name="android:textAllCaps">false</item>
         </style>
-    
+
         <style name="PaymentInformation">
             <item name="android:textSize">15sp</item>
             <item name="android:textStyle">bold</item>
@@ -409,8 +409,18 @@
             <item name="android:fontFamily">sans-serif</item>
             <item name="android:textAllCaps">false</item>
         </style>
-    
 
 
+        <style name="FieldBase">
+            <item name="android:gravity">center_vertical</item>
+            <item name="android:fontFamily">sans-serif</item>
+            <item name="android:textColor">@color/black</item>
+        </style>
+
+        <style name="FieldLabel" parent="FieldBase"></style>
+
+        <style name="FieldValue" parent="FieldBase">
+            <item name="android:textStyle">bold</item>
+        </style>
 
 </resources>
