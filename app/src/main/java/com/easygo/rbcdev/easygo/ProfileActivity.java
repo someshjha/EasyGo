@@ -2,9 +2,7 @@ package com.easygo.rbcdev.easygo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +24,7 @@ public class ProfileActivity extends Activity {
     private EditText mNewPassword;
     private EditText mConfirmPassword;
     private Header mHeader;
-    private Intent i;
+    private String loginType;
 
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
@@ -39,14 +37,15 @@ public class ProfileActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        i = getIntent();
+        Intent i = getIntent();
+        loginType = i.getStringExtra(Constants.LOGIN_TYPE);
+
         initializeUI();
         showHidePasswordFields();
 //        initialize();
     }
 
     private void showHidePasswordFields() {
-        String loginType = i.getStringExtra("loginType");
         if(loginType.equals(Constants.SOBEYS_GUEST)){
             mLayoutPasswordChange.setVisibility(View.GONE);
             //Make profile info password fields and labels visible

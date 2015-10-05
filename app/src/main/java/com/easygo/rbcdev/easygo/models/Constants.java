@@ -3,11 +3,12 @@ package com.easygo.rbcdev.easygo.models;
 /**
  * Created by rbcdev on 15-09-25.
  */
-public enum Constants {
+public class Constants {
 
-    SOBEYS_LOGIN_CUSTOMER,
-    SOBEYS_LOGIN_BUSINESS,
-    SOBEYS_GUEST,
-    SOBEYS_CUSTOMER
+    public static final String SOBEYS_LOGIN_CUSTOMER = "SOBEYS_LOGIN_CUSTOMER";
+    public static final String SOBEYS_LOGIN_BUSINESS = "SOBEYS_LOGIN_BUSINESS";
+    public static final String SOBEYS_GUEST = "SOBEYS_GUEST";
+    public static final String SOBEYS_CUSTOMER = "SOBEYS_CUSTOMER";
+    public static final String LOGIN_TYPE = "loginType";
 
 }
