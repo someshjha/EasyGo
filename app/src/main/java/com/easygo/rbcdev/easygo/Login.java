@@ -29,6 +29,19 @@ public class Login extends Activity {
 
     };
 
+    private View.OnClickListener mOnClickRegister = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            doRegistration();
+        }
+    };
+
+    private void doRegistration() {
+        Intent i = new Intent(this,ProfileActivity.class);
+        i.putExtra("LoginType",Constants.SOBEYS_GUEST);
+        startActivity(i);
+    }
+
     private void doSignIn() {
         Intent i;
 
@@ -64,6 +77,7 @@ public class Login extends Activity {
 
         mTxtTitle = (TextView) findViewById(R.id.loginTitle);
         mTxtRegister = (TextView) findViewById(R.id.txtLoginRegister);
+        mTxtRegister.setOnClickListener(mOnClickRegister);
         mSignIn = (Button) findViewById(R.id.btnSignIn);
         mSignIn.setOnClickListener(mOnClickSignIn);
         checkLoginType();

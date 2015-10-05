@@ -36,6 +36,18 @@ public class Customer extends Model implements Serializable {
     @Column(name = "city")
     private String city;
 
+    @Column(name = "postalCode")
+    private String postalCode;
+
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
     public String getFirstName() {
         return firstName;
     }

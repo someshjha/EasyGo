@@ -6,6 +6,8 @@ package com.easygo.rbcdev.easygo.models;
 public enum Constants {
 
     SOBEYS_LOGIN_CUSTOMER,
-    SOBEYS_LOGIN_BUSINESS
+    SOBEYS_LOGIN_BUSINESS,
+    SOBEYS_GUEST,
+    SOBEYS_CUSTOMER
 
 }
