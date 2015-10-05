@@ -11,4 +11,26 @@
     <color name="link_blue">#0000EE</color>
     <color name="blue_btn_pressed">#4BFFFFFF</color>
     <color name="background_business">#73B2DFDB</color>
+    <color name="blue_dark">#002888</color>
+    <color name="blue_medium">#5672b3</color>
+    <color name="blue_light">#5773B1</color>
+    <color name="blue_light_text">#C1CDEA</color>
+    <color name="blue_badge">#5082EE</color>
+    <color name="gold">#fbd80c</color>
+    <color name="muted_white">#b3ffffff</color>
+    <color name="background_grey">#EFEFF4</color>
+    <color name="muted_text_grey">#545454</color>
+    <color name="muted_bg_line_grey">#e3e4e6</color>
+    <color name="divider_line_grey">#b2b2b2</color>
+    <color name="textbox_field_grey">#f0f0f0</color>
+    <color name="other_inactive_grey">#cccccc</color>
+    <color name="search_hint_blue">#80c4cde5</color>
+    <color name="primary_btn_pressed">#353f5b</color>
+    <color name="list_item_pressed">#20000000</color>
+    <color name="blue_btn_disabled">#4C67AA</color>
+    <color name="background_red">#B5141F</color>
+    <color name="label_grey">#757575</color>
+    <color name="grey_tab">#44454D</color>
+    <color name="selected_tab">#2257CA</color>
+    <color name="banner">#C3CDE9</color>
 </resources>
