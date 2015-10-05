@@ -58,12 +58,10 @@ public class ShoppingItemsActivity extends Activity {
     private void populateLists() {
         itemAdapter = ArrayAdapter.createFromResource(this, R.array.items, android.R.layout.simple_list_item_1);
         itemAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        mLstStoreList.setAdapter(itemAdapter);
         mLstCategoryList.setAdapter(itemAdapter);
     }
 
     private void initializeUI() {
-//        mLstStoreList = (Spinner) findViewById(R.id.StoreList);
         mLstCategoryList = (Spinner) findViewById(R.id.CategoryList);
         mHeader = (Header) findViewById(R.id.header);
         mHeader.setBtnRightListener(settingsListener);

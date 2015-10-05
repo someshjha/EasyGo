@@ -2,7 +2,6 @@ package com.easygo.rbcdev.easygo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +15,7 @@ public class Settings extends Activity {
 
     private Header mHeader;
     private Button mBtnProfile;
+    private Button mBtnHistory;
 
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
@@ -30,6 +30,18 @@ public class Settings extends Activity {
             goToProfile();
         }
     };
+
+    private View.OnClickListener historyListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            goToHistory();
+        }
+    };
+
+    private void goToHistory() {
+        Intent i = new Intent(this,ShoppingHistoryActivity.class);
+        startActivity(i);
+    }
 
     private void goToProfile() {
         Intent i = new Intent(this,ProfileActivity.class);
@@ -48,6 +60,8 @@ public class Settings extends Activity {
         mHeader.setBtnLeftListener(backListener);
         mBtnProfile = (Button) findViewById(R.id.btnProfile);
         mBtnProfile.setOnClickListener(profileListener);
+        mBtnHistory = (Button) findViewById(R.id.btnShoppingHistory);
+        mBtnHistory.setOnClickListener(historyListener);
     }
 
 

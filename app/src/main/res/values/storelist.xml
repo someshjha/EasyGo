@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="locations">
+        <item>50 Innovation Drive</item>
+        <item>2357 Brunswick Street</item>
+        <item>520 Joseph Howe</item>
+    </string-array>
+</resources>
