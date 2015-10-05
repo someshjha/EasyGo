@@ -140,6 +140,7 @@
     <string name="myShoppingHistory">Your Shopping History</string>
     <string name="title_activity_employee_evaluation">EmployeeEvaluation</string>
     <string name="title_activity_leave_request">LeaveRequest</string>
+    <string name="dailyValues">Daily Values</string>
 
     <!-- User Profile Ends -->
 
