@@ -17,6 +17,7 @@ public class Settings extends Activity {
     private Button mBtnProfile;
     private Button mBtnHistory;
 
+
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -46,6 +47,8 @@ public class Settings extends Activity {
     private void goToProfile() {
         Intent i = new Intent(this,ProfileActivity.class);
         startActivity(i);
+
+
     }
 
     @Override
