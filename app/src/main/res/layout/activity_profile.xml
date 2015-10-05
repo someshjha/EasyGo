@@ -136,25 +136,26 @@
                 android:id="@+id/profileNewPass"
                 style="@style/profileCommentFields"
                 custom:label="New Password"
-                android:visibility="gone"/>
+                />
 
             <EditText
                 android:id="@+id/password"
                 style="@style/ProfileEditTextFields"
                 android:hint="Enter New Password"
-                android:visibility="gone"/>
+                />
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileNewPassConfirm"
                 style="@style/profileCommentFields"
                 custom:label="Confirm Password"
-                android:visibility="gone"/>
+                />
 
             <EditText
                 android:id="@+id/passwordConfirm"
                 style="@style/ProfileEditTextFields"
                 android:hint="Enter Password"
-                android:visibility="gone"/>
+
+                />
 
             <Button
                 android:id="@+id/btnSavePersonalInfo"
