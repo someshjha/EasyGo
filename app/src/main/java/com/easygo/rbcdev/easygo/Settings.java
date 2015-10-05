@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.easygo.rbcdev.easygo.models.Constants;
 import com.easygo.rbcdev.easygo.widgets.Header;
 
 
@@ -46,6 +47,7 @@ public class Settings extends Activity {
 
     private void goToProfile() {
         Intent i = new Intent(this,ProfileActivity.class);
+        i.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
         startActivity(i);
 
 

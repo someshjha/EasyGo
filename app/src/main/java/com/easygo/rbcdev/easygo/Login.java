@@ -38,7 +38,7 @@ public class Login extends Activity {
 
     private void doRegistration() {
         Intent i = new Intent(this,ProfileActivity.class);
-        i.putExtra("LoginType",Constants.SOBEYS_GUEST);
+        i.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_GUEST);
         startActivity(i);
     }
 
