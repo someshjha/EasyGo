@@ -20,6 +20,7 @@
             android:id="@+id/header"
             style="@style/Header"
             android:orientation="horizontal"
+            custom:leftIcon="@drawable/icon_back"
             custom:headerTitle="Profile" />
 
         <LinearLayout
