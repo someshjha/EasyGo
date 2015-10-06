@@ -143,6 +143,7 @@
     <string name="title_activity_employee_evaluation">EmployeeEvaluation</string>
     <string name="title_activity_leave_request">LeaveRequest</string>
     <string name="dailyValues">Daily Values</string>
+    <string name="title_activity_forgot_password">forgot_password</string>
 
     <!-- User Profile Ends -->
 
