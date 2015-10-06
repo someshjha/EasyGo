@@ -15,10 +15,12 @@ import com.easygo.rbcdev.easygo.models.Constants;
 
 public class Login extends Activity {
 
+    private Activity mActivity = this;
     private TextView mTxtTitle;
     private String mLoginType;
     private TextView mTxtRegister;
     private Button mSignIn;
+    private TextView mForgotPassword;
 
     private View.OnClickListener mOnClickSignIn = new View.OnClickListener() {
 
@@ -75,11 +77,19 @@ public class Login extends Activity {
             layout.setBackgroundResource(R.drawable.produce_bg);
         }
 
+        mForgotPassword = (TextView)findViewById(R.id.txtLoginForgotPassword);
+        mForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mActivity, ForgotPassword.class));
+            }
+        });
         mTxtTitle = (TextView) findViewById(R.id.loginTitle);
         mTxtRegister = (TextView) findViewById(R.id.txtLoginRegister);
         mTxtRegister.setOnClickListener(mOnClickRegister);
         mSignIn = (Button) findViewById(R.id.btnSignIn);
         mSignIn.setOnClickListener(mOnClickSignIn);
+
         checkLoginType();
     }
 
