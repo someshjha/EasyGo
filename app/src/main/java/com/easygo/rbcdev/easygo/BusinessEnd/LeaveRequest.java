@@ -1,39 +1,43 @@
 package com.easygo.rbcdev.easygo.BusinessEnd;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.easygo.rbcdev.easygo.R;
 
-public class LeaveRequest extends AppCompatActivity {
+public class LeaveRequest extends Activity {
+
+    private Activity mActivity = this;
+    private TextView dateSet;
+    private Button btnSubmit;
+    private EditText editReason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leave_request);
+        initialize();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_leave_request, menu);
-        return true;
-    }
+    public void initialize(){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        editReason = (EditText)findViewById(R.id.editReason);
+        dateSet = (TextView) findViewById(R.id.pickerDate);
+        btnSubmit = (Button) findViewById(R.id.btnSubmitApplication);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(mActivity, "Your Application has been sent to your manager.", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            });
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
-        return super.onOptionsItemSelected(item);
+
     }
 }
