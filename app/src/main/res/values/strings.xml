@@ -145,6 +145,11 @@
     <string name="dailyValues">Daily Values</string>
     <string name="title_activity_forgot_password">forgot_password</string>
 
+
+
+    <string name="btnForgotPasswordSendEmail">Send Email</string>
+    <string name="btnForgotPasswordCalcel">Cancel</string>
+
     <!-- User Profile Ends -->
 
 
