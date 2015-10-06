@@ -15,10 +15,15 @@ import com.easygo.rbcdev.easygo.models.Constants;
 
 public class Login extends Activity {
 
+    private Activity mActivity = this;
     private TextView mTxtTitle;
     private String mLoginType;
     private TextView mTxtRegister;
     private Button mSignIn;
+
+    private TextView mTxtForgotPassword;
+
+    private TextView mForgotPassword;
 
     private View.OnClickListener mOnClickSignIn = new View.OnClickListener() {
 
@@ -35,6 +40,24 @@ public class Login extends Activity {
             doRegistration();
         }
     };
+
+    // Forgot Password
+    private View.OnClickListener mOnClickGetPassword = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            goGetNewPassword();
+        }
+    };
+
+    private void goGetNewPassword() {
+        Intent i = new Intent(this,ForgotPassword.class);
+        startActivity(i);
+
+
+    }
+
+
+    // Forgot Password
 
     private void doRegistration() {
         Intent i = new Intent(this,ProfileActivity.class);
@@ -75,11 +98,24 @@ public class Login extends Activity {
             layout.setBackgroundResource(R.drawable.produce_bg);
         }
 
+        mForgotPassword = (TextView)findViewById(R.id.txtLoginForgotPassword);
+        mForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mActivity, ForgotPassword.class));
+            }
+        });
         mTxtTitle = (TextView) findViewById(R.id.loginTitle);
         mTxtRegister = (TextView) findViewById(R.id.txtLoginRegister);
         mTxtRegister.setOnClickListener(mOnClickRegister);
+
+        mTxtForgotPassword = (TextView) findViewById(R.id.txtLoginForgotPassword);
+        mTxtForgotPassword.setOnClickListener(mOnClickGetPassword);
+
+
         mSignIn = (Button) findViewById(R.id.btnSignIn);
         mSignIn.setOnClickListener(mOnClickSignIn);
+
         checkLoginType();
     }
 
