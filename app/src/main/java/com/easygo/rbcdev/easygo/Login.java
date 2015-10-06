@@ -19,6 +19,8 @@ public class Login extends Activity {
     private String mLoginType;
     private TextView mTxtRegister;
     private Button mSignIn;
+    private TextView mTxtForgotPassword;
+
 
     private View.OnClickListener mOnClickSignIn = new View.OnClickListener() {
 
@@ -35,6 +37,24 @@ public class Login extends Activity {
             doRegistration();
         }
     };
+
+    // Forgot Password
+    private View.OnClickListener mOnClickGetPassword = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            goGetNewPassword();
+        }
+    };
+
+    private void goGetNewPassword() {
+        Intent i = new Intent(this,forgot_password.class);
+        startActivity(i);
+
+
+    }
+
+
+    // Forgot Password
 
     private void doRegistration() {
         Intent i = new Intent(this,ProfileActivity.class);
@@ -78,6 +98,11 @@ public class Login extends Activity {
         mTxtTitle = (TextView) findViewById(R.id.loginTitle);
         mTxtRegister = (TextView) findViewById(R.id.txtLoginRegister);
         mTxtRegister.setOnClickListener(mOnClickRegister);
+
+        mTxtForgotPassword = (TextView) findViewById(R.id.txtLoginForgotPassword);
+        mTxtForgotPassword.setOnClickListener(mOnClickGetPassword);
+
+
         mSignIn = (Button) findViewById(R.id.btnSignIn);
         mSignIn.setOnClickListener(mOnClickSignIn);
         checkLoginType();
