@@ -47,12 +47,31 @@ public class ProfileActivity extends Activity {
 
     private void showHidePasswordFields() {
         if(loginType.equals(Constants.SOBEYS_GUEST)){
+
             mLayoutPasswordChange.setVisibility(View.GONE);
+
             //Make profile info password fields and labels visible
+            mNewPasswordLabel.setVisibility(View.VISIBLE);
+
+            mConfirmPassword.setVisibility(View.VISIBLE);
+
+            mNewPassword.setVisibility(View.VISIBLE);
+
+            mConfirmPassword.setVisibility(View.VISIBLE);
+
+
         }
         else {
             //hide profile info password fields and labels
             mLayoutPasswordChange.setVisibility(View.VISIBLE);
+
+            mNewPasswordLabel.setVisibility(View.GONE);
+
+            mConfirmPasswordLabel.setVisibility(View.GONE);
+
+            mNewPassword.setVisibility(View.GONE);
+
+            mConfirmPassword.setVisibility(View.GONE);
         }
 
     }
@@ -61,7 +80,17 @@ public class ProfileActivity extends Activity {
         mHeader = (Header) findViewById(R.id.header);
         mHeader.setBtnLeftListener(backListener);
         mLayoutPasswordChange = (LinearLayout) findViewById(R.id.ChangePasswordInformation);
+        
         //initialize new password fields here
+        mNewPasswordLabel = (CustomField) findViewById(R.id.profileNewPass);
+
+        mConfirmPasswordLabel = (CustomField) findViewById(R.id.profileNewPassConfirm);
+
+        mNewPassword = (EditText) findViewById(R.id.password);
+
+        mConfirmPassword = (EditText) findViewById(R.id.passwordConfirm);
+
+
     }
 
 //    private void initialize(){
