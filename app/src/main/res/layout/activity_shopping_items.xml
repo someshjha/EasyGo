@@ -38,12 +38,7 @@
             android:layout_margin="15dp"/>
 
 
-        <!--<Spinner-->
-            <!--android:id="@+id/province"-->
-            <!--android:entries="@array/province"-->
-            <!--style="@style/profileSpinner"-->
 
-            <!--/>-->
 
         <ScrollView
             android:id="@+id/itemScrollView"

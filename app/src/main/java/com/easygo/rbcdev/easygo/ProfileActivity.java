@@ -42,7 +42,7 @@ public class ProfileActivity extends Activity {
 
         initializeUI();
         showHidePasswordFields();
-//        initialize();
+        //        initialize();
     }
 
     private void showHidePasswordFields() {
