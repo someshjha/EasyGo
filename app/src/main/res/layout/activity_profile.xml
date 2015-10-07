@@ -291,7 +291,8 @@
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileCommentCardType"
                 style="@style/profileCommentFields"
-                custom:label="Method of Payment" />
+                custom:label="Method of Payment"
+               />
 
             <Spinner
                 android:id="@+id/payMethod"

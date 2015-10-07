@@ -34,16 +34,18 @@ public class ForgotPassword extends Activity {
         @Override
         public void onClick(View v) {
 
-            setPasswordEmail();
+        setPasswordEmail();
 
-            finish();
+        finish();
+
         }
     };
 
     private void setPasswordEmail(){
 
         Toast.makeText(getApplicationContext(),
-                "The link to reset your password has been send to the account associated email address.", Toast.LENGTH_LONG).show();
+                "The link to reset your password has been send to the account " +
+                 "associated email address.", Toast.LENGTH_LONG).show();
 
     }
 
