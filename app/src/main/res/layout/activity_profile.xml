@@ -63,7 +63,7 @@
             <EditText
                 android:id="@+id/firstName"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter First Name" />
+                android:hint="Enter first name" />
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileCommentLastName"
@@ -73,7 +73,7 @@
             <EditText
                 android:id="@+id/lastName"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Last Name" />
+                android:hint="Enter last name" />
 
 
 
@@ -85,7 +85,7 @@
             <EditText
                 android:id="@+id/email"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Email Address" />
+                android:hint="Enter email address" />
 
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
@@ -95,7 +95,7 @@
             <EditText
                 android:id="@+id/customerPhoneEditText"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Phone Number" />
+                android:hint="Enter phone number" />
 
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
@@ -106,7 +106,7 @@
             <EditText
                 android:id="@+id/address"
                 style="@style/ProfileEditTextFields"
-                android:hint="Apt-Street Num and Name" />
+                android:hint="Apt- street Number and Name" />
 
 
 
@@ -118,7 +118,7 @@
             <EditText
                 android:id="@+id/city"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter City Name" />
+                android:hint="Enter city name" />
             <!--android:layout_height=".25dp"-->
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileCommentProvince"
@@ -141,7 +141,7 @@
             <EditText
                 android:id="@+id/password"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter New Password"
+                android:hint="Enter new password"
                 />
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
@@ -153,7 +153,7 @@
             <EditText
                 android:id="@+id/passwordConfirm"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Password"
+                android:hint="Enter password"
 
                 />
 
@@ -213,7 +213,7 @@
             <EditText
                 android:id="@+id/customerOldPassEditText"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Old Password" />
+                android:hint="Enter old password" />
 
 
 
@@ -225,18 +225,18 @@
             <EditText
                 android:id="@+id/customerNewPasswordEditText"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter New Password" />
+                android:hint="Enter new password" />
 
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileReEnterPassComment"
                 style="@style/profileCommentFields"
-                custom:label="Re-Type Password" />
+                custom:label="Re-type Password" />
 
             <EditText
                 android:id="@+id/customerReEnterPassEditText"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter New Password Again " />
+                android:hint="Enter new password again " />
 
 
             <Button
@@ -308,7 +308,7 @@
             <EditText
                 android:id="@+id/customerNameOnCardEditText"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Full Name on Card" />
+                android:hint="Enter full name on card" />
 
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
@@ -319,7 +319,7 @@
             <EditText
                 android:id="@+id/customerCardNumberEditText"
                 style="@style/ProfileEditTextFields"
-                android:hint="Enter Card Number" />
+                android:hint="Enter card number" />
 
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileCommentExpireMonthYear"
@@ -334,7 +334,7 @@
             <com.easygo.rbcdev.easygo.widgets.CustomField
                 android:id="@+id/profileCommentSecurityCode"
                 style="@style/profileCommentFields"
-                custom:label="Security Code"
+                custom:label="Security code"
                 />
             <EditText
                 android:id="@+id/customerCardSecurityEditText"

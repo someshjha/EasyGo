@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
 
 import com.easygo.rbcdev.easygo.widgets.Header;
 
@@ -32,24 +34,18 @@ public class ForgotPassword extends Activity {
         @Override
         public void onClick(View v) {
 
-
+            setPasswordEmail();
 
             finish();
         }
     };
 
-//    private void setPasswordEmail(){
-//
-//        Context context = getApplicationContext();
-//        CharSequence text = "Hello toast!";
-//        int duration = Toast.LENGTH_SHORT;
-//
-//        Toast toast = Toast.makeText(context, text, duration);
-//        toast.show();
-//
-//
-//
-//    }
+    private void setPasswordEmail(){
+
+        Toast.makeText(getApplicationContext(),
+                "The link to reset your password has been send to the account associated email address.", Toast.LENGTH_LONG).show();
+
+    }
 
 
     private void initialize() {
