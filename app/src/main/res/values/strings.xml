@@ -7,7 +7,7 @@
     <string name="btnBusiness">BUSINESS LOGIN</string>
     <string name="btnCustomer">CUSTOMER LOGIN</string>
     <string name="title_activity_login">Login</string>
-    <string name="username_hint">Enter Username</string>
+    <string name="username_hint">Enter E-mail</string>
     <string name="password_hint">Enter Password</string>
     <string name="SignIn">Sign In</string>
     <string name="txtRegister">Register</string>
