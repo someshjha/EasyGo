@@ -5,6 +5,7 @@ import java.io.Serializable;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
 
 /**
  * Created by rbcdev on 15-10-05.
@@ -31,7 +32,7 @@ public class Customer extends Model implements Serializable {
     private String email;
 
     @Column(name = "province")
-    private String province;
+    private int province;
 
     @Column(name = "city")
     private String city;
@@ -39,6 +40,16 @@ public class Customer extends Model implements Serializable {
     @Column(name = "postalCode")
     private String postalCode;
 
+    @Column(name = "phone")
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getPostalCode() {
         return postalCode;
@@ -96,11 +107,11 @@ public class Customer extends Model implements Serializable {
         this.email = email;
     }
 
-    public String getProvince() {
+    public int getProvince() {
         return province;
     }
 
-    public void setProvince(String province) {
+    public void setProvince(int province) {
         this.province = province;
     }
 
@@ -110,6 +121,21 @@ public class Customer extends Model implements Serializable {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public static Customer getSavedCustomerProfile(String id) {
+        return new Select()
+                .from(Customer.class)
+                .where("email = ?", id)
+                .executeSingle();
+    }
+
+    public static Customer getSavedCustomer(String email, String password) {
+        return new Select()
+                .from(Customer.class)
+                .where("email = ?", email)
+                .and("password = ?", password)
+                .executeSingle();
     }
 
 }

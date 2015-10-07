@@ -17,7 +17,7 @@ public class Settings extends Activity {
     private Header mHeader;
     private Button mBtnProfile;
     private Button mBtnHistory;
-
+    private String mCustomerEmail;
 
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
@@ -48,8 +48,8 @@ public class Settings extends Activity {
     private void goToProfile() {
         Intent i = new Intent(this,ProfileActivity.class);
         i.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
+        i.putExtra(Constants.CUSTOMER_EMAIL,mCustomerEmail);
         startActivity(i);
-
 
     }
 
@@ -57,6 +57,8 @@ public class Settings extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        Intent i = getIntent();
+        mCustomerEmail = i.getStringExtra(Constants.CUSTOMER_EMAIL);
         initializeUI();
     }
 

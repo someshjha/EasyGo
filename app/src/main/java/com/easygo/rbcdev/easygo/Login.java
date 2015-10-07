@@ -1,16 +1,20 @@
 package com.easygo.rbcdev.easygo;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.easygo.rbcdev.easygo.Utility.AlertUtility;
 import com.easygo.rbcdev.easygo.models.Constants;
+import com.easygo.rbcdev.easygo.models.Customer;
 
 
 public class Login extends Activity {
@@ -19,6 +23,8 @@ public class Login extends Activity {
     private TextView mTxtTitle;
     private String mLoginType;
     private TextView mTxtRegister;
+    private EditText mTxtUsername;
+    private EditText mTxtPassword;
     private Button mSignIn;
 
     private TextView mTxtForgotPassword;
@@ -52,10 +58,7 @@ public class Login extends Activity {
     private void goGetNewPassword() {
         Intent i = new Intent(this,ForgotPassword.class);
         startActivity(i);
-
-
     }
-
 
     // Forgot Password
 
@@ -67,6 +70,8 @@ public class Login extends Activity {
 
     private void doSignIn() {
         Intent i;
+        String loginEmail = mTxtUsername.getText().toString();
+        String loginPassword = mTxtPassword.getText().toString();
 
         if(mLoginType.equals(Constants.SOBEYS_LOGIN_BUSINESS.toString())){
             i = new Intent(this,BusinessHome.class);
@@ -75,7 +80,20 @@ public class Login extends Activity {
             i = new Intent(this,ShoppingHome.class);
         }
 
-        startActivity(i);
+        if(loginEmail.isEmpty() || loginPassword.isEmpty()) {
+            AlertUtility.displayAlert("Please enter email and password",this);
+        }
+        else {
+            Customer loggedIn = Customer.getSavedCustomer(loginEmail,loginPassword);
+            if(loggedIn != null) {
+                i.putExtra(Constants.LOGIN_TYPE,Constants.SOBEYS_CUSTOMER);
+                i.putExtra(Constants.CUSTOMER_EMAIL,loggedIn.getEmail());
+                startActivity(i);
+            } else {
+                AlertUtility.displayAlert("Customer login failed",this);
+            }
+        }
+
     }
 
     @Override
@@ -112,9 +130,11 @@ public class Login extends Activity {
         mTxtForgotPassword = (TextView) findViewById(R.id.txtLoginForgotPassword);
         mTxtForgotPassword.setOnClickListener(mOnClickGetPassword);
 
-
         mSignIn = (Button) findViewById(R.id.btnSignIn);
         mSignIn.setOnClickListener(mOnClickSignIn);
+
+        mTxtUsername = (EditText) findViewById(R.id.txtUsername);
+        mTxtPassword = (EditText) findViewById(R.id.txtPassword);
 
         checkLoginType();
     }

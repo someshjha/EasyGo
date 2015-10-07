@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.easygo.rbcdev.easygo.models.Constants;
 import com.easygo.rbcdev.easygo.widgets.Header;
 
 
@@ -16,6 +17,8 @@ public class ShoppingHome extends Activity {
 
     private Header mHeader;
     private Button mBtnStartShopping;
+    private String loggedInUser;
+    private Intent i;
 
     private View.OnClickListener settingsListener = new View.OnClickListener() {
         @Override
@@ -32,19 +35,23 @@ public class ShoppingHome extends Activity {
     };
 
     private void goToShopping() {
-        Intent i = new Intent(this,ShoppingItemsActivity.class);
+        Intent intent = new Intent(this,ShoppingItemsActivity.class);
         startActivity(i);
     }
 
     private void goToSettings() {
-        Intent i = new Intent(this,Settings.class);
-        startActivity(i);
+        Intent intent = new Intent(this,Settings.class);
+        intent.putExtra(Constants.LOGIN_TYPE,Constants.SOBEYS_CUSTOMER);
+        intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
+        startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_home);
+        i = getIntent();
+        loggedInUser = i.getStringExtra(Constants.CUSTOMER_EMAIL);
         initializeUI();
     }
 
