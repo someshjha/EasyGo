@@ -38,6 +38,10 @@ public class ProfileActivity extends Activity {
     private Spinner mProvince;
     private Spinner mPayMethod;
     private EditText mPassword;
+    private EditText mUpdateNewPassword;
+    private EditText mUpdateReNewPassword;
+    private EditText mUpdateOldPassword;
+    private Button mBtnUpdatePassword;
     private EditText mNewPassword;
     private EditText mConfirmPassword;
     private EditText mNameOnCard;
@@ -52,6 +56,7 @@ public class ProfileActivity extends Activity {
     private PaymentInformation currentCustomerPaymentInfo;
     private Intent i;
     private EditText mCustomerOldPasswordEditText;
+
 
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
@@ -70,6 +75,43 @@ public class ProfileActivity extends Activity {
             }
         }
     };
+
+    // Update Password button
+    private View.OnClickListener mOnClickUpdatePassword = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            updatePassword();
+        }
+    };
+
+    private void updatePassword(){
+
+
+        if(mCustomerOldPasswordEditText.getText().toString() == null){
+            AlertUtility.displayAlert("Old password can't be empty.Please enter Old password",this);
+        }
+        else if(mCustomerOldPasswordEditText.getText().toString()== mUpdateNewPassword.getText().toString()){
+
+            AlertUtility.displayAlert("New password can't be same as old password. Please enter and update password",this);
+        }
+
+        else if (mUpdateNewPassword.getText().toString() != mUpdateReNewPassword.getText().toString() ){
+
+            AlertUtility.displayAlert("New password and confirm password has to be same. " +
+                    "Please enter same as new password.",this);
+        }
+        else {
+
+            currentCustomer.setPassword(mUpdateNewPassword.getText().toString());
+            currentCustomer.save();
+            Toast.makeText(getApplicationContext(),
+                    "You password has been updated.", Toast.LENGTH_SHORT).show();
+        }
+
+
+
+
+    }
 
     private void registerCustomer() {
 
@@ -249,13 +291,27 @@ public class ProfileActivity extends Activity {
         mProvince = (Spinner) findViewById(R.id.province);
         mPassword = (EditText) findViewById(R.id.password);
 
+
+
+        mCustomerOldPasswordEditText = (EditText) findViewById(R.id.customerOldPassEditText);
+        mUpdateNewPassword = (EditText) findViewById(R.id.customerNewPasswordEditText);
+        mUpdateReNewPassword = (EditText) findViewById(R.id.customerReEnterPassEditText);
+
+        mBtnUpdatePassword = (Button) findViewById(R.id.btnChangePassword);
+        mBtnUpdatePassword.setOnClickListener(mOnClickUpdatePassword);
+
+
+
+
+
+
         mPayMethod = (Spinner) findViewById(R.id.payMethod);
         mNameOnCard = (EditText) findViewById(R.id.customerNameOnCardEditText);
         mCardNumber = (EditText) findViewById(R.id.customerCardNumberEditText);
         mExpiry = (EditText) findViewById(R.id.customerExpireEditText);
         mSecurityCode = (EditText) findViewById(R.id.customerCardSecurityEditText);
 
-        mCustomerOldPasswordEditText = (EditText) findViewById(R.id.customerOldPassEditText);
+        //mCustomerOldPasswordEditText = (EditText) findViewById(R.id.customerOldPassEditText);
         mBtnSaveCardInfo = (Button) findViewById(R.id.btnSaveCardInfo);
         mBtnSaveCardInfo.setOnClickListener(submitInfoListener);
     }
