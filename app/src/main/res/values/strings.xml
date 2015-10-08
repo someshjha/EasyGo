@@ -130,9 +130,6 @@
         <item>2026</item>
     </string-array>
 
-
-
-
     <string name="title_activity_cart">CartActivity</string>
     <string name="productDetails">Product Details</string>
     <string name="shoppingCart">Shopping Cart</string>
@@ -158,6 +155,12 @@
 
     <!-- User Profile Ends -->
 
+    <string-array name="Sobey_Store">
+        <item></item>
+    </string-array>
 
 
     <!-- User Profile Ends --></resources>
+
+
+
