@@ -11,5 +11,6 @@ public class Constants {
     public static final String SOBEYS_CUSTOMER = "SOBEYS_CUSTOMER";
     public static final String LOGIN_TYPE = "loginType";
     public static final String CUSTOMER_EMAIL = "customerEmail";
+    public static final String ITEMS = "items";
 
 }

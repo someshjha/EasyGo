@@ -1,10 +1,13 @@
 package com.easygo.rbcdev.easygo.models;
 
+import java.io.Serializable;
+
 /**
  * Created by rbcdev on 15-10-06.
  */
-public class Item {
+public class Item implements Serializable {
 
+    private String itemID;
     private String itemUnit;
     private String itemName;
     private String itemPrice;
@@ -24,6 +27,13 @@ public class Item {
     private String itemCalcium;
     private String itemIron;
 
+    public String getItemID() {
+        return itemID;
+    }
+
+    public void setItemID(String itemID) {
+        this.itemID = itemID;
+    }
 
     public String getItemName() {
         return itemName;

@@ -7,10 +7,19 @@ import android.view.View;
 import android.widget.Button;
 
 import com.easygo.rbcdev.easygo.models.Constants;
+import com.easygo.rbcdev.easygo.models.Item;
+import com.easygo.rbcdev.easygo.models.Items;
 import com.easygo.rbcdev.easygo.widgets.Header;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 
 public class ShoppingHome extends Activity {
@@ -18,6 +27,7 @@ public class ShoppingHome extends Activity {
     private Header mHeader;
     private Button mBtnStartShopping;
     private String loggedInUser;
+    private Items storeItems;
     private Intent i;
 
     private View.OnClickListener settingsListener = new View.OnClickListener() {
@@ -36,13 +46,16 @@ public class ShoppingHome extends Activity {
 
     private void goToShopping() {
         Intent intent = new Intent(this,ShoppingItemsActivity.class);
-        startActivity(i);
+        intent.putExtra(Constants.ITEMS,storeItems);
+        intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
+        intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
+        startActivity(intent);
     }
 
     private void goToSettings() {
         Intent intent = new Intent(this,Settings.class);
         intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
-        intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
+        intent.putExtra(Constants.CUSTOMER_EMAIL, loggedInUser);
         startActivity(intent);
     }
 
@@ -58,7 +71,17 @@ public class ShoppingHome extends Activity {
 
     private void populateItems() {
         String itemString = loadFromJson();
-        String nothing = itemString;
+        JSONArray itemArray;
+
+        try {
+            itemArray = new JSONArray(itemString);
+            storeItems = new Items();
+            Type listType = new TypeToken<ArrayList<Item>>() {}.getType();
+            ArrayList<Item> loadItems = new Gson().fromJson(itemArray.toString(), listType);
+            storeItems.setCurrentItems(loadItems);
+        } catch (JSONException e){
+            e.getStackTrace();
+        }
     }
 
     private String loadFromJson() {
