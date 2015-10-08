@@ -55,7 +55,7 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name=".BusinessHome"
+            android:name=".BusinessEnd.BusinessHome"
             android:label="@string/title_activity_business_home"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
@@ -118,6 +118,16 @@
         <activity
             android:name=".BusinessEnd.ProgressReport"
             android:label="@string/title_activity_progress_report"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".BusinessEnd.QuaterlySales"
+            android:label="@string/title_activity_quaterly_sales"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".BusinessEnd.AnnualSales"
+            android:label="@string/title_activity_annual_sales"
             android:theme="@style/AppTheme" >
         </activity>
     </application>

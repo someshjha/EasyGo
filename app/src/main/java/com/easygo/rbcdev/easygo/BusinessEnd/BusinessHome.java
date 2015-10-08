@@ -1,4 +1,4 @@
-package com.easygo.rbcdev.easygo;
+package com.easygo.rbcdev.easygo.BusinessEnd;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.easygo.rbcdev.easygo.BusinessEnd.EmployeeEvaluation;
 import com.easygo.rbcdev.easygo.BusinessEnd.LeaveRequest;
+import com.easygo.rbcdev.easygo.R;
 
 
 public class BusinessHome extends Activity {

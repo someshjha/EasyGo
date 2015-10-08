@@ -130,6 +130,9 @@
         <item>2026</item>
     </string-array>
 
+
+
+
     <string name="title_activity_cart">CartActivity</string>
     <string name="productDetails">Product Details</string>
     <string name="shoppingCart">Shopping Cart</string>
@@ -150,6 +153,8 @@
     <string name="btnForgotPasswordSendEmail">Send Email</string>
     <string name="btnForgotPasswordCalcel">Cancel</string>
     <string name="title_activity_progress_report">ProgressReport</string>
+    <string name="title_activity_quaterly_sales">QuaterlySales</string>
+    <string name="title_activity_annual_sales">AnnualSales</string>
 
     <!-- User Profile Ends -->
 
