@@ -39,6 +39,7 @@
                 <TextView
                     android:id="@+id/lblDate"
                     android:text="Date: "
+                    android:textColor="@color/black"
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:textSize="25sp"
@@ -47,6 +48,7 @@
                     />
                 <TextView
                     android:id="@+id/pickerDate"
+                    android:textColor="@color/black"
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:textSize="25sp"
@@ -66,6 +68,8 @@
                     android:text="Reason: "
                     android:layout_width="0dp"
                     android:layout_height="60dp"
+                    android:textColor="@color/black"
+
                     android:textSize="25sp"
                     android:layout_weight="0.3"
                     android:gravity="center_horizontal|center_vertical"
