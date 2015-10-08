@@ -71,7 +71,7 @@
             android:label="@string/title_activity_profile"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name=".ShoppingItemsActivity"
@@ -113,7 +113,12 @@
             android:name=".ForgotPassword"
             android:label="@string/title_activity_forgot_password"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".BusinessEnd.ProgressReport"
+            android:label="@string/title_activity_progress_report"
+            android:theme="@style/AppTheme" >
         </activity>
     </application>
 

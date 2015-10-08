@@ -149,6 +149,7 @@
 
     <string name="btnForgotPasswordSendEmail">Send Email</string>
     <string name="btnForgotPasswordCalcel">Cancel</string>
+    <string name="title_activity_progress_report">ProgressReport</string>
 
     <!-- User Profile Ends -->
 

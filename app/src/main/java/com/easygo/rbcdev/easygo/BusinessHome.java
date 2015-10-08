@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.easygo.rbcdev.easygo.BusinessEnd.EmployeeEvaluation;
 import com.easygo.rbcdev.easygo.BusinessEnd.LeaveRequest;
 
 
@@ -33,7 +34,7 @@ public class BusinessHome extends Activity {
         employeeEval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                employeeEval.setBackgroundColor(getResources().getColor(R.color.blue_btn_pressed));
+                startActivity(new Intent(mActivity, EmployeeEvaluation.class));
             }
         });
         progressReport = (TextView)findViewById(R.id.progressReport);
