@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="com.activeandroid.app.Application"
@@ -25,6 +27,7 @@
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="1" />
+
 
         <activity
             android:name=".MainActivity"
@@ -130,6 +133,13 @@
             android:label="@string/title_activity_annual_sales"
             android:theme="@style/AppTheme" >
         </activity>
+
+        <!-- Quality assurance application activities -->
+
+        <activity android:name="com.ibm.mqa.ui.ProblemActivity" />
+        <activity android:name="com.ibm.mqa.ui.FeedbackActivity" />
+        <activity android:name="com.ibm.mqa.ui.ScreenshotEditorActivity" />
+
     </application>
 
 </manifest>

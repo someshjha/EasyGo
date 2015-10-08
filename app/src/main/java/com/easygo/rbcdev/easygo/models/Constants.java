@@ -12,5 +12,7 @@ public class Constants {
     public static final String LOGIN_TYPE = "loginType";
     public static final String CUSTOMER_EMAIL = "customerEmail";
     public static final String ITEMS = "items";
+    public static final String APP_KEY = "1ge8bd6d0b4bb3b24bcc66c8dbc29722b1b6c15eaeg0g1g55440e2e";
+
 
 }
