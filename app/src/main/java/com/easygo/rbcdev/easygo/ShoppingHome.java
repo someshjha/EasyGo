@@ -9,6 +9,9 @@ import android.widget.Button;
 import com.easygo.rbcdev.easygo.models.Constants;
 import com.easygo.rbcdev.easygo.widgets.Header;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 
 public class ShoppingHome extends Activity {
 
@@ -38,7 +41,7 @@ public class ShoppingHome extends Activity {
 
     private void goToSettings() {
         Intent intent = new Intent(this,Settings.class);
-        intent.putExtra(Constants.LOGIN_TYPE,Constants.SOBEYS_CUSTOMER);
+        intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
         intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
         startActivity(intent);
     }
@@ -50,6 +53,28 @@ public class ShoppingHome extends Activity {
         i = getIntent();
         loggedInUser = i.getStringExtra(Constants.CUSTOMER_EMAIL);
         initializeUI();
+        populateItems();
+    }
+
+    private void populateItems() {
+        String itemString = loadFromJson();
+        String nothing = itemString;
+    }
+
+    private String loadFromJson() {
+        String json = null;
+        try {
+            InputStream is = this.getAssets().open("Json-Response-Items");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
     private void initializeUI() {

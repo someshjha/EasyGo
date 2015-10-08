@@ -73,6 +73,7 @@ public class Login extends Activity {
 
         if(mLoginType.equals(Constants.SOBEYS_LOGIN_BUSINESS.toString())){
             i = new Intent(this,BusinessHome.class);
+            startActivity(i);
         }
         else {
             i = new Intent(this,ShoppingHome.class);
