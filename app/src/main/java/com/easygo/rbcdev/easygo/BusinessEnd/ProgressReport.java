@@ -5,13 +5,13 @@ import android.os.Bundle;
 
 import com.easygo.rbcdev.easygo.R;
 
-public class EmployeeEvaluation extends Activity {
+public class ProgressReport extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_employee_evaluation);
-    }
+        setContentView(R.layout.activity_progress_report);
 
+    }
 
 }

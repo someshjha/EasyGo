@@ -1,13 +1,255 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
-    tools:context="com.easygo.rbcdev.easygo.BusinessEnd.EmployeeEvaluation"
-    android:background="@drawable/business_bg_alt"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    android:stackFromBottom="true"
+    android:transcriptMode="alwaysScroll" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.easygo.rbcdev.easygo.BusinessEnd.EmployeeEvaluation"
+        android:background="@drawable/business_bg_alt"
+        android:orientation="vertical">
+
+
+        <com.easygo.rbcdev.easygo.widgets.Header
+            android:id="@+id/header"
+            style="@style/Header"
+            android:orientation="horizontal"
+            custom:headerTitle="Employee Evaluation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_rounded_background"
+            android:layout_below="@+id/header"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_height="60dp"
+               android:layout_width="match_parent"
+               >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Name: "
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblName"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Somesh Jha"
+                    android:id="@+id/txtName"
+                    android:layout_gravity="center_horizontal" />
+           </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Position"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblPosition"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Cashier"
+                    android:id="@+id/txtPosition"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Leaves Taken"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblLeavesTaken"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="1"
+                    android:id="@+id/txtLeavesTaken"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Average Time/transaction"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblAvgTime"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="10 minutes"
+                    android:id="@+id/txtAvgTime"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Manager Rating"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblManagerRating"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="5"
+                    android:id="@+id/txtManagerRating"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Hours/week"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblHoursPerWeek"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="35"
+                    android:id="@+id/txtHoursPerWeek"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Date Joined"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="0.4"
+                    android:id="@+id/lblDateJoined"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:background="@color/background_business"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="21 December, 2014"
+                    android:id="@+id/txtDateLbl"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:text="Previous Ratings"
+                android:id="@+id/button"
+                android:background="@color/sobeys_green"
+                android:textSize="25sp" />
+        </LinearLayout>
 
 
 
 
-</LinearLayout>
+    </RelativeLayout>
+</ScrollView>
