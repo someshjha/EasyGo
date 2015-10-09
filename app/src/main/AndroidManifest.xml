@@ -130,15 +130,16 @@
         <activity
             android:name=".BusinessEnd.AnnualSales"
             android:label="@string/title_activity_annual_sales"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme" >
         </activity>
 
         <!-- Quality assurance application activities -->
 
-        <activity android:name="com.ibm.mqa.ui.ProblemActivity" />
+        <!--<activity android:name="com.ibm.mqa.ui.ProblemActivity" />
         <activity android:name="com.ibm.mqa.ui.FeedbackActivity" />
         <activity android:name="com.ibm.mqa.ui.ScreenshotEditorActivity" />
-        <activity android:name=".BusinessEnd.EmployeeEvalMain" >
+        --><activity android:name=".BusinessEnd.EmployeeEvalMain" >
         </activity>
         <activity android:name=".GraphItemNutrients" >
         </activity>
