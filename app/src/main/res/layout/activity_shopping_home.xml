@@ -23,7 +23,7 @@
         <TextView
             android:id="@+id/txtGreeting"
             style="@style/Greeting"
-            android:text="Welcome Back, User" />
+            android:text="Welcome Back!" />
 
         <TextView
             android:id="@+id/txtInstructions"

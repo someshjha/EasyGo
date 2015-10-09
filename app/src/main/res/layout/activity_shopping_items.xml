@@ -14,10 +14,10 @@
         custom:rightIcon="@drawable/icon_settings"
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_below="@id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:id="@+id/linearLayout"
         android:background="@drawable/white_rounded_background"
@@ -37,26 +37,22 @@
             android:layout_centerHorizontal="true"
             android:layout_margin="15dp"/>
 
-
-
-
-        <ScrollView
-            android:id="@+id/itemScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/lstItems" />
-        </ScrollView>
+        <ListView
+            android:layout_below="@+id/CategoryList"
+            android:layout_above="@+id/btnViewCartItems"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/lstItems" />
 
         <Button
-            android:layout_below="@id/linearLayout"
+            android:layout_alignParentBottom="true"
             android:id="@+id/btnViewCartItems"
             style="@style/BusinessButton"
             android:text="@string/viewCart"
             android:layout_margin="15dp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

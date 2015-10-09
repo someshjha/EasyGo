@@ -22,7 +22,7 @@ public class Items implements Serializable {
         ArrayList<Item> filtered = new ArrayList<Item>();
         int i;
 
-        for(Item item: filtered) {
+        for(Item item: itemList) {
             if(item.getItemCategory().equals(category)) {
                 filtered.add(item);
             }
