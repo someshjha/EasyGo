@@ -12,13 +12,6 @@ import com.easygo.rbcdev.easygo.R;
 public class BusinessHome extends Activity {
 
     private Activity mActivity = this;
-    private TextView employeeEval;
-    private TextView progressReport;
-    private TextView quaterlySales;
-    private TextView annualSales;
-    private TextView leaveRequest;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,21 +22,21 @@ public class BusinessHome extends Activity {
 
     private void initialize(){
 
-        employeeEval = (TextView)findViewById(R.id.employeeEval);
+        TextView employeeEval = (TextView)findViewById(R.id.employeeEval);
         employeeEval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mActivity, EmployeeEvalMain.class));
             }
         });
-        progressReport = (TextView)findViewById(R.id.progressReport);
+        TextView progressReport = (TextView)findViewById(R.id.progressReport);
         progressReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mActivity, ProgressReport.class);
                 startActivity(intent);            }
         });
-        quaterlySales = (TextView)findViewById(R.id.quaterlySales);
+        TextView quaterlySales = (TextView)findViewById(R.id.quaterlySales);
         quaterlySales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +45,7 @@ public class BusinessHome extends Activity {
             }
 
         });
-        annualSales = (TextView)findViewById(R.id.annualSales);
+        TextView annualSales = (TextView)findViewById(R.id.annualSales);
         annualSales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +53,7 @@ public class BusinessHome extends Activity {
                 startActivity(intent);
             }
         });
-        leaveRequest = (TextView)findViewById(R.id.leaveRequest);
+        TextView leaveRequest = (TextView)findViewById(R.id.leaveRequest);
         leaveRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
