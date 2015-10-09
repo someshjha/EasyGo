@@ -143,7 +143,7 @@
                     android:id="@+id/productFieldQuantity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    custom:txtLabel="@string/weight"
+                    custom:txtLabel="@string/quantity"
                     android:visibility="gone">
                 </com.easygo.rbcdev.easygo.widgets.CustomEditText>
 

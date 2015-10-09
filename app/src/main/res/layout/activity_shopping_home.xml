@@ -40,6 +40,7 @@
             android:id="@+id/btnLoadCart"
             style="@style/BusinessButton"
             android:text="@string/loadShoppingCart"
+            android:visibility="gone"
             android:layout_margin="15dp" />
 
         <Button

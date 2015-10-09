@@ -1,6 +1,7 @@
 package com.easygo.rbcdev.easygo;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,8 @@ public class ShoppingHome extends Activity {
 
     private Header mHeader;
     private Button mBtnStartShopping;
+    private Button mBtnCheckOut;
+    private Button mBtnLogout;
     private String loggedInUser;
     private Items storeItems;
     private Intent i;
@@ -44,6 +47,26 @@ public class ShoppingHome extends Activity {
         }
     };
 
+    private View.OnClickListener cartListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+           goToCart();
+        }
+    };
+
+    private View.OnClickListener logOutListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            goToLogin();
+        }
+    };
+
+    private void goToLogin() {
+        Intent intent = new Intent(this,Login.class);
+        intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_GUEST);
+        startActivity(intent);
+    }
+
     private void goToShopping() {
         Intent intent = new Intent(this,ShoppingItemsActivity.class);
         intent.putExtra(Constants.ITEMS,storeItems);
@@ -56,6 +79,13 @@ public class ShoppingHome extends Activity {
         Intent intent = new Intent(this,Settings.class);
         intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
         intent.putExtra(Constants.CUSTOMER_EMAIL, loggedInUser);
+        startActivity(intent);
+    }
+
+    private void goToCart() {
+        Intent intent = new Intent(this,CartActivity.class);
+        intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
+        intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
         startActivity(intent);
     }
 
@@ -105,8 +135,10 @@ public class ShoppingHome extends Activity {
         mHeader.setBtnRightListener(settingsListener);
         mBtnStartShopping = (Button) findViewById(R.id.btnStartShopping);
         mBtnStartShopping.setOnClickListener(startShoppingListener);
+        mBtnCheckOut = (Button) findViewById(R.id.btnCheckOut);
+        mBtnCheckOut.setOnClickListener(cartListener);
+        mBtnLogout = (Button) findViewById(R.id.btnLogOut);
+        mBtnLogout.setOnClickListener(logOutListener);
     }
-
-
 
 }

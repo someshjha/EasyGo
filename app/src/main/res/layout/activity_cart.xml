@@ -14,7 +14,7 @@
         custom:headerTitle="@string/shoppingCart"
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/white_rounded_background"
@@ -25,10 +25,11 @@
         <TextView
             android:id="@+id/shoppingCartTitle"
             android:text="@string/yourShoppingCart"
+            android:layout_centerHorizontal="true"
             android:textSize="25sp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
@@ -36,32 +37,35 @@
             android:layout_height="wrap_content" />
 
         <Spinner
+            android:layout_below="@+id/shoppingCartTitle"
+            android:layout_above="@+id/emptyList"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:gravity="center"
             android:id="@+id/StoreList"
             android:layout_margin="15dp"/>
 
         <TextView
             android:id="@+id/emptyList"
             style="@style/LoginTitle"
+            android:visibility="gone"
             android:text="Your Cart Is Empty"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <ScrollView
-            android:id="@+id/itemScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_gravity="center">
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/lstCartItems" />
-        </ScrollView>
+
+        <ListView
+            android:layout_above="@+id/cartDivider"
+            android:layout_below="@+id/StoreList"
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/lstCartItems" />
 
         <View
+            android:layout_above="@+id/cartSubTotalField"
             android:id="@+id/cartDivider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -69,30 +73,33 @@
             android:background="@drawable/list_divider"/>
 
         <com.easygo.rbcdev.easygo.widgets.CustomField
+            android:layout_above="@+id/cartTaxField"
             android:id="@+id/cartSubTotalField"
             style="@style/ItemField"
             custom:label="@string/subTotal" >
         </com.easygo.rbcdev.easygo.widgets.CustomField>
 
         <com.easygo.rbcdev.easygo.widgets.CustomField
+            android:layout_above="@+id/itemTotalField"
             android:id="@+id/cartTaxField"
             style="@style/ItemField"
             custom:label="@string/tax" >
         </com.easygo.rbcdev.easygo.widgets.CustomField>
 
         <com.easygo.rbcdev.easygo.widgets.CustomField
+            android:layout_above="@+id/btnSubmit"
             android:id="@+id/itemTotalField"
             style="@style/ItemField"
             custom:label="@string/total" >
         </com.easygo.rbcdev.easygo.widgets.CustomField>
 
         <Button
-            android:layout_below="@id/itemTotalField"
+            android:layout_alignParentBottom="true"
             android:id="@+id/btnSubmit"
             style="@style/BusinessButton"
             android:text="@string/submitOrder"
             android:layout_margin="15dp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
