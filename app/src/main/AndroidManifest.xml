@@ -140,6 +140,8 @@
         <activity android:name="com.ibm.mqa.ui.ScreenshotEditorActivity" />
         <activity android:name=".BusinessEnd.EmployeeEvalMain" >
         </activity>
+        <activity android:name=".GraphItemNutrients" >
+        </activity>
     </application>
 
 </manifest>

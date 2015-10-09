@@ -1,7 +1,6 @@
 package com.easygo.rbcdev.easygo;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,6 @@ import com.easygo.rbcdev.easygo.Utility.AlertUtility;
 import com.easygo.rbcdev.easygo.models.Cart;
 import com.easygo.rbcdev.easygo.models.Constants;
 import com.easygo.rbcdev.easygo.models.Item;
-import com.easygo.rbcdev.easygo.models.Items;
 import com.easygo.rbcdev.easygo.widgets.CustomEditText;
 import com.easygo.rbcdev.easygo.widgets.CustomField;
 import com.easygo.rbcdev.easygo.widgets.Header;
@@ -37,6 +35,7 @@ public class ProductDetailsActivity extends Activity {
     private CustomEditText mWeight;
     private Header mHeader;
     private SquareImageButton mGetNutrition;
+    private Activity mActivity = this;
 
 
     private View.OnClickListener addToCartListener = new View.OnClickListener() {
@@ -141,6 +140,9 @@ public class ProductDetailsActivity extends Activity {
             @Override
             public void onClick(View v) {
 
+                Intent i = new Intent(mActivity, GraphItemNutrients.class);
+                i.putExtra(Constants.ITEM, currentItem);
+                startActivity(i);
             }
         });
 
