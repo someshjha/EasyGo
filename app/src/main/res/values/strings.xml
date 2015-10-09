@@ -99,7 +99,7 @@
     </string-array>
 
     <string-array name="employee_Position">
-
+        <item>Select position</item>
         <item>Manager</item>
         <item>Supervisor</item>
         <item>Casher</item>
@@ -111,7 +111,7 @@
     </string-array>
 
     <string-array name="sobeys_Addressess">
-
+        <item>Select Location</item>
         <item>Queen Street</item>
         <item>Windsor St</item>
         <item>Mumford Rd</item>
