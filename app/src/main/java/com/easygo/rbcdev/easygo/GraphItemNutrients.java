@@ -97,7 +97,7 @@ public class GraphItemNutrients extends Activity {
             xVals.add(xData[x]);
 
 
-        PieDataSet pieDataSet = new PieDataSet(yVals, "Nutrient Value");
+        PieDataSet pieDataSet = new PieDataSet(yVals, "Nutrients Value");
         pieDataSet.setSliceSpace(3);
         pieDataSet.setSelectionShift(5);
 

@@ -40,14 +40,15 @@ public class BusinessHome extends Activity {
         progressReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressReport.setBackgroundColor(getResources().getColor(R.color.blue_btn_pressed));
-            }
+                Intent intent = new Intent(mActivity, ProgressReport.class);
+                startActivity(intent);            }
         });
         quaterlySales = (TextView)findViewById(R.id.quaterlySales);
         quaterlySales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                quaterlySales.setBackgroundColor(getResources().getColor(R.color.sobeys_green));
+                Intent intent = new Intent(mActivity, QuaterlySales.class);
+                startActivity(intent);
             }
 
         });
@@ -55,22 +56,10 @@ public class BusinessHome extends Activity {
         annualSales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                annualSales.setBackgroundColor(getResources().getColor(R.color.blue_btn_pressed));
                 Intent intent = new Intent(mActivity, AnnualSales.class);
                 startActivity(intent);
             }
         });
-        annualSales.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                quaterlySales.setBackgroundColor(getResources().getColor(R.color.sobeys_green));
-
-
-                return false;
-            }
-        });
-
-
         leaveRequest = (TextView)findViewById(R.id.leaveRequest);
         leaveRequest.setOnClickListener(new View.OnClickListener() {
             @Override
