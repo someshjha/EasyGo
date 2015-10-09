@@ -19,6 +19,7 @@
             style="@style/Header"
             android:orientation="horizontal"
             custom:headerTitle="@string/productDetails"
+            custom:leftIcon="@drawable/icon_back"
             />
 
         <LinearLayout

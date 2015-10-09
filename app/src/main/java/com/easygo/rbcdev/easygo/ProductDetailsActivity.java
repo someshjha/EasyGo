@@ -1,23 +1,27 @@
 package com.easygo.rbcdev.easygo;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.easygo.rbcdev.easygo.Utility.AlertUtility;
+import com.easygo.rbcdev.easygo.models.Cart;
 import com.easygo.rbcdev.easygo.models.Constants;
 import com.easygo.rbcdev.easygo.models.Item;
+import com.easygo.rbcdev.easygo.models.Items;
+import com.easygo.rbcdev.easygo.widgets.CustomEditText;
 import com.easygo.rbcdev.easygo.widgets.CustomField;
 import com.easygo.rbcdev.easygo.widgets.Header;
 import com.easygo.rbcdev.easygo.widgets.SquareImageButton;
-import com.github.mikephil.charting.charts.PieChart;
 
 
 public class ProductDetailsActivity extends Activity {
 
-    private Activity mActivity = this;
     private SquareImageButton mBtnNutrition;
     private Button mBtnAddToCard;
     private Intent i;
@@ -29,21 +33,69 @@ public class ProductDetailsActivity extends Activity {
     private CustomField mUnits;
     private CustomField mServingSize;
     private CustomField mCalories;
+    private CustomEditText mQuantity;
+    private CustomEditText mWeight;
     private Header mHeader;
     private SquareImageButton mGetNutrition;
-
 
 
     private View.OnClickListener addToCartListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            goToCart();
+            if(currentItem.getItemUnit().equals("KG")) {
+                if(mWeight.getmTxtValue().isEmpty() && mWeight.getVisibility() == View.VISIBLE) {
+                    displayError("Please fill out weight");
+                } else {
+                    addToCart();
+                }
+
+            }
+            else{
+                if(mQuantity.getmTxtValue().isEmpty() && mQuantity.getVisibility() == View.VISIBLE ) {
+                    displayError("Please fill out value");
+                }
+                else {
+                    addToCart();
+                }
+            }
         }
     };
 
-    private void goToCart() {
-        Intent i = new Intent(this,CartActivity.class);
-        startActivity(i);
+    private void displayError(String message) {
+        AlertUtility.displayAlert(message, this);
+    }
+
+    private View.OnClickListener backListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+    };
+
+    private void addToCart() {
+        String itemPrice;
+        Double price = 0.0;
+        Cart itemToAdd = new Cart();
+
+        String weight = mWeight.getmTxtValue();
+        String quantity = mQuantity.getmTxtValue();
+
+        if(currentItem.getItemUnit().equals("KG")  && mWeight.getVisibility() == View.VISIBLE) {
+            price = Double.parseDouble(currentItem.getItemPrice())
+                    * (double) Integer.parseInt(mWeight.getmTxtValue().trim());
+        } else {
+            if(mQuantity.getVisibility() == View.VISIBLE) {
+            price = Double.parseDouble(currentItem.getItemPrice())
+                    * (double) Integer.parseInt(mQuantity.getmTxtValue().trim());
+            }
+        }
+
+        itemToAdd.setItemPrice(String.valueOf(price));
+        itemToAdd.setCustomerEmail(loggedInUser);
+        itemToAdd.setItemName(currentItem.getItemName());
+
+        Toast.makeText(this, currentItem.getItemName() + " has been added to cart", Toast.LENGTH_LONG).show();
+        finish();
     }
 
     @Override
@@ -75,37 +127,32 @@ public class ProductDetailsActivity extends Activity {
         mCalories = (CustomField) findViewById(R.id.itemCalories);
         mCalories.setValue(currentItem.getItemCalories());
         mHeader = (Header) findViewById(R.id.header);
-        mGetNutrition = (SquareImageButton)findViewById(R.id.btnNutritionIcon);
-        mBtnNutrition.setVisibility(View.VISIBLE);
+        mHeader.setBtnLeftListener(backListener);
+        mQuantity = (CustomEditText) findViewById(R.id.productFieldQuantity);
+        mWeight = (CustomEditText) findViewById(R.id.productFieldWeight);
+        showHideCustomEditText();
+mGetNutrition = (SquareImageButton)findViewById(R.id.btnNutritionIcon);
+        if(currentItem.getItemServingSize() != "NA"){
+            mBtnNutrition.setVisibility(View.VISIBLE);
+        }
         mBtnNutrition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(mActivity, GraphItemNutrients.class);
-                i.putExtra("item", currentItem);
-                startActivity(i);
+
             }
         });
 
     }
 
-    private void createPieChart(Item item){
-        PieChart pc = new PieChart(mActivity);
-
-        float calcium  = Float.valueOf(item.getItemCalcium());
-        float carbohydrate  = Float.valueOf(item.getItemCarbohydrate());
-        float cholestrol  = Float.valueOf(item.getItemCholestrol());
-        float fat  = Float.valueOf(item.getItemFat());
-        float fibre  = Float.valueOf(item.getItemFibre());
-        float iron  = Float.valueOf(item.getItemIron());
-        float protein  = Float.valueOf(item.getItemProtein());
-        float saturatedTransFat  = Float.valueOf(item.getItemSaturatedTransFat());
-        float sodium  = Float.valueOf(item.getItemSodium());
-        float sugar  = Float.valueOf(item.getItemSugars());
-        float vitaminA  = Float.valueOf(item.getItemVitaminA());
-        float vitaminC  = Float.valueOf(item.getItemVitaminC());
-
-
-
+    private void showHideCustomEditText() {
+        if(currentItem.getItemUnit().equals("KG")) {
+            mQuantity.setVisibility(View.GONE);
+            mWeight.setVisibility(View.VISIBLE);
+        }
+        else {
+            mWeight.setVisibility(View.GONE);
+            mQuantity.setVisibility(View.VISIBLE);
+        }
     }
 
 }
