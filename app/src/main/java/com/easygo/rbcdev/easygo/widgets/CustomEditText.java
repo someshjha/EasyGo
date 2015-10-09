@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -31,5 +32,15 @@ public class CustomEditText extends LinearLayout{
         mTxtLabel = (TextView) findViewById(R.id.itemTxtLabel);
         mTxtLabel.setText(mLabel);
 
+        mTxtValue = (EditText) findViewById(R.id.itemTxtValue);
+
+    }
+
+    public void setmTxtValue(String value) {
+        mTxtValue.setText(value);
+    }
+
+    public String getmTxtValue() {
+        return mTxtValue.getText().toString();
     }
 }
