@@ -37,10 +37,10 @@ public class ShoppingItemsActivity extends Activity {
         }
     };
 
-    private View.OnClickListener productDetailsListener = new View.OnClickListener() {
+    private View.OnClickListener viewCartListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            goToProductDetails();
+            goToCart();
         }
     };
 
@@ -76,9 +76,11 @@ public class ShoppingItemsActivity extends Activity {
         }
     };
 
-    private void goToProductDetails() {
-        Intent i = new Intent(this,ProductDetailsActivity.class);
-        startActivity(i);
+    private void goToCart() {
+        Intent intent = new Intent(getBaseContext(),CartActivity.class);
+        intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
+        intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
+        startActivity(intent);
     }
 
     private void goToSettings() {
@@ -118,7 +120,7 @@ public class ShoppingItemsActivity extends Activity {
         mHeader = (Header) findViewById(R.id.header);
         mHeader.setBtnRightListener(settingsListener);
         mBtnViewCart = (Button) findViewById(R.id.btnViewCartItems);
-        mBtnViewCart.setOnClickListener(productDetailsListener);
+        mBtnViewCart.setOnClickListener(viewCartListener);
         mAvailableItems = (ListView) findViewById(R.id.lstItems);
     }
 

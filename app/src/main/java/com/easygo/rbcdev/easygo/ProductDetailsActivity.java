@@ -93,6 +93,7 @@ public class ProductDetailsActivity extends Activity {
         itemToAdd.setItemPrice(String.valueOf(price));
         itemToAdd.setCustomerEmail(loggedInUser);
         itemToAdd.setItemName(currentItem.getItemName());
+        itemToAdd.save();
 
         Toast.makeText(this, currentItem.getItemName() + " has been added to cart", Toast.LENGTH_LONG).show();
         finish();
@@ -131,7 +132,8 @@ public class ProductDetailsActivity extends Activity {
         mQuantity = (CustomEditText) findViewById(R.id.productFieldQuantity);
         mWeight = (CustomEditText) findViewById(R.id.productFieldWeight);
         showHideCustomEditText();
-mGetNutrition = (SquareImageButton)findViewById(R.id.btnNutritionIcon);
+
+        mGetNutrition = (SquareImageButton)findViewById(R.id.btnNutritionIcon);
         if(currentItem.getItemServingSize() != "NA"){
             mBtnNutrition.setVisibility(View.VISIBLE);
         }
