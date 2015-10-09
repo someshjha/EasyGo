@@ -140,7 +140,7 @@ public class GraphItemNutrients extends Activity {
         //add Legends
 
         Legend l = mChart.getLegend();
-        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+        l.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);
         l.setXEntrySpace(7);
         l.setYEntrySpace(5);
 
