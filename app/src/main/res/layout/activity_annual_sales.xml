@@ -24,11 +24,6 @@
 
 
         <Spinner
-            android:id="@+id/sbEmployeePosition"
-            android:entries="@array/employee_Position"
-            style="@style/profileSpinner"/>
-
-        <Spinner
             android:id="@+id/sbStoreAddress"
             android:entries="@array/sobeys_Addressess"
             style="@style/profileSpinner"/>
