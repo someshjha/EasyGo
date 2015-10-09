@@ -3,6 +3,8 @@ package com.easygo.rbcdev.easygo.models;
 import com.activeandroid.Model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
@@ -12,8 +14,8 @@ import com.activeandroid.query.Select;
  */
 
 @Table(name = "ShoppingHistory")
-
 public class ShoppingHistory extends Model implements Serializable {
+
     @Column(name = "date")
     private String date;
 
@@ -57,6 +59,17 @@ public class ShoppingHistory extends Model implements Serializable {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+
+    public static ArrayList<ShoppingHistory> getHistory(String email) {
+        List<ShoppingHistory> all = new Select()
+                .all()
+                .from(ShoppingHistory.class)
+                .where("customerEmail = ?", email)
+                .execute();
+
+        ArrayList<ShoppingHistory> returnedHistory = new ArrayList<ShoppingHistory>(all);
+        return returnedHistory;
     }
 
 

@@ -62,8 +62,9 @@ public class Settings extends Activity {
     }
 
     private void goToHistory() {
-        Intent i = new Intent(this,ShoppingHistoryActivity.class);
-        startActivity(i);
+        Intent intent = new Intent(this,ShoppingHistoryActivity.class);
+        intent.putExtra(Constants.CUSTOMER_EMAIL,mCustomerEmail);
+        startActivity(intent);
     }
 
     private void goToLogin() {

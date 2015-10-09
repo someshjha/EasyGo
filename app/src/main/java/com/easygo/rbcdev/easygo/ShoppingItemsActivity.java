@@ -84,8 +84,10 @@ public class ShoppingItemsActivity extends Activity {
     }
 
     private void goToSettings() {
-        Intent i = new Intent(this,Settings.class);
-        startActivity(i);
+        Intent intent = new Intent(this,Settings.class);
+        intent.putExtra(Constants.CUSTOMER_EMAIL,loggedInUser);
+        intent.putExtra(Constants.LOGIN_TYPE, Constants.SOBEYS_CUSTOMER);
+        startActivity(intent);
     }
 
     @Override

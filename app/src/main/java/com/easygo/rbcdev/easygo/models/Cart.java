@@ -65,16 +65,4 @@ public class Cart extends Model implements Serializable {
         new Delete().from(Cart.class).where("customerEmail = ?", email).execute();
     }
 
-//    private void calculateTotals() {
-//        Double total = 0.0;
-//        Double tax = 0.0;
-//
-//        for(Item item:cartItems){
-//            total += Double.parseDouble(item.getItemPrice());
-//        }
-//
-//        mSubTotal = total;
-//        mTax = 0.15 * mSubTotal;
-//        mTotal = mTax + mSubTotal;
-//    }
 }

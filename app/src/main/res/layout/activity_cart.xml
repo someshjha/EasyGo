@@ -47,6 +47,7 @@
 
         <TextView
             android:id="@+id/emptyList"
+            android:layout_below="@id/shoppingCartTitle"
             style="@style/LoginTitle"
             android:visibility="gone"
             android:text="Your Cart Is Empty"

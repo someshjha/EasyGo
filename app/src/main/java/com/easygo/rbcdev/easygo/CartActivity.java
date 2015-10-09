@@ -70,10 +70,11 @@ public class CartActivity extends Activity {
                 ShoppingHistory history = new ShoppingHistory();
                 history.setDate(date);
                 history.setStore(store);
-                history.setCustomerEmail(loggedInUser);
+                history.setCustomerEmail(email);
                 history.setTotal(amount);
                 history.save();
 
+                Cart.emptyCart(email);
                 showOrderSubmitted();
                 goToShoppingHome();
             }
@@ -112,7 +113,7 @@ public class CartActivity extends Activity {
         retrievedItems = Cart.getCart(loggedInUser);
         ArrayList<Item> cartItems = new ArrayList<Item>();
 
-        if(!retrievedItems.isEmpty() || retrievedItems != null) {
+        if(!retrievedItems.isEmpty() && retrievedItems != null) {
             mSelectedItems.setVisibility(View.VISIBLE);
             mEmptyList.setVisibility(View.GONE);
             for(Cart cartItem:retrievedItems) {
