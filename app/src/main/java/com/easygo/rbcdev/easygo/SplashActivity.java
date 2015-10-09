@@ -8,6 +8,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.easygo.rbcdev.easygo.models.Constants;
+import com.ibm.mqa.MQA;
+import com.ibm.mqa.config.Configuration;
 
 public class SplashActivity extends Activity {
 
@@ -40,6 +43,15 @@ public class SplashActivity extends Activity {
     }
 
 
+//    //MQA
+//    Configuration configuration = new Configuration.Builder(this)
+//            .withAPIKey(Constants.APP_KEY) // Provides the quality assurance application APP_KEY
+//            .withMode(MQA.Mode.QA) //Selects the quality assurance production mode.  This example is for preproduction mode,
+//                    //Use .withMode(Mode.MARKET) for production mode.
+//            .withReportOnShakeEnabled(true) // Enables shake report trigger
+//            .build();
+//
+//    MQA.startNewSession(this, configuration);
 
     private void prepUI() {
         ImageView logo = (ImageView) findViewById(R.id.logo);
