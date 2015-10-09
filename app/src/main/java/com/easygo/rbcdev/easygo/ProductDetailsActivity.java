@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.easygo.rbcdev.easygo.models.Constants;
 import com.easygo.rbcdev.easygo.models.Item;
-import com.easygo.rbcdev.easygo.models.Items;
 import com.easygo.rbcdev.easygo.widgets.CustomField;
 import com.easygo.rbcdev.easygo.widgets.Header;
 import com.easygo.rbcdev.easygo.widgets.SquareImageButton;
@@ -29,6 +28,8 @@ public class ProductDetailsActivity extends Activity {
     private CustomField mServingSize;
     private CustomField mCalories;
     private Header mHeader;
+    private SquareImageButton mGetNutrition;
+
 
     private View.OnClickListener addToCartListener = new View.OnClickListener() {
         @Override
@@ -71,6 +72,16 @@ public class ProductDetailsActivity extends Activity {
         mCalories = (CustomField) findViewById(R.id.itemCalories);
         mCalories.setValue(currentItem.getItemCalories());
         mHeader = (Header) findViewById(R.id.header);
+        mGetNutrition = (SquareImageButton)findViewById(R.id.btnNutritionIcon);
+        if(currentItem.getItemServingSize() != "NA"){
+            mBtnNutrition.setVisibility(View.VISIBLE);
+        }
+        mBtnNutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
 }
