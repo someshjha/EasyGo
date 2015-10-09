@@ -36,6 +36,8 @@ public class ProductDetailsActivity extends Activity {
     private CustomEditText mQuantity;
     private CustomEditText mWeight;
     private Header mHeader;
+    private SquareImageButton mGetNutrition;
+
 
     private View.OnClickListener addToCartListener = new View.OnClickListener() {
         @Override
@@ -129,6 +131,17 @@ public class ProductDetailsActivity extends Activity {
         mQuantity = (CustomEditText) findViewById(R.id.productFieldQuantity);
         mWeight = (CustomEditText) findViewById(R.id.productFieldWeight);
         showHideCustomEditText();
+mGetNutrition = (SquareImageButton)findViewById(R.id.btnNutritionIcon);
+        if(currentItem.getItemServingSize() != "NA"){
+            mBtnNutrition.setVisibility(View.VISIBLE);
+        }
+        mBtnNutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     private void showHideCustomEditText() {

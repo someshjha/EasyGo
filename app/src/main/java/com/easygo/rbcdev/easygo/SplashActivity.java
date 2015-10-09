@@ -8,10 +8,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.easygo.rbcdev.easygo.models.Constants;
-import com.ibm.mqa.MQA;
-import com.ibm.mqa.config.Configuration;
-
 public class SplashActivity extends Activity {
 
     // Splash screen timer

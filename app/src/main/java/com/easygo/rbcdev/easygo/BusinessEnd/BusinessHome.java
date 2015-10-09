@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.easygo.rbcdev.easygo.BusinessEnd.EmployeeEvaluation;
-import com.easygo.rbcdev.easygo.BusinessEnd.LeaveRequest;
 import com.easygo.rbcdev.easygo.R;
 
 
@@ -35,7 +33,7 @@ public class BusinessHome extends Activity {
         employeeEval.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mActivity, EmployeeEvaluation.class));
+                startActivity(new Intent(mActivity, EmployeeEvalMain.class));
             }
         });
         progressReport = (TextView)findViewById(R.id.progressReport);
@@ -58,6 +56,8 @@ public class BusinessHome extends Activity {
             @Override
             public void onClick(View v) {
                 annualSales.setBackgroundColor(getResources().getColor(R.color.blue_btn_pressed));
+                Intent intent = new Intent(mActivity, AnnualSales.class);
+                startActivity(intent);
             }
         });
         annualSales.setOnLongClickListener(new View.OnLongClickListener() {
@@ -65,9 +65,12 @@ public class BusinessHome extends Activity {
             public boolean onLongClick(View v) {
                 quaterlySales.setBackgroundColor(getResources().getColor(R.color.sobeys_green));
 
+
                 return false;
             }
         });
+
+
         leaveRequest = (TextView)findViewById(R.id.leaveRequest);
         leaveRequest.setOnClickListener(new View.OnClickListener() {
             @Override

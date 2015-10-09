@@ -1,0 +1,173 @@
+[
+  {
+    "employeeId":1,
+    "name":"Salley Landeros",
+    "position":"Manager",
+    "address":"Spring Garden",
+    "leavesTaken":2,
+    "rating":5,
+    "password":"password1"
+  },
+  {
+    "employeeId":2,
+    "name":"Pennie Cairns",
+    "position":"Supervisor",
+    "address":"",
+    "leavesTaken":3,
+    "rating":6,
+    "password":"password2"
+  },
+  {
+    "employeeId":3,
+    "name":"Rubi Stgeorge",
+    "position":"Cashier",
+    "address":"Queen St",
+    "leavesTaken":4,
+    "rating":7,
+    "password":"password3"
+  },
+  {
+    "employeeId":4,
+    "name":"Anisha Oler",
+    "position":"Security",
+    "address":"",
+    "leavesTaken":5,
+    "rating":5,
+    "password":"password4"
+  },
+  {
+    "employeeId":5,
+    "name":"Setsuko Kita",
+    "position":"Product Manager",
+    "address":"Victoria Rd",
+    "leavesTaken":6,
+    "rating":4,
+    "password":"password5"
+  },
+  {
+    "employeeId":6,
+    "name":"Corazon Kash",
+    "position":"Cook",
+    "address":"",
+    "leavesTaken":7,
+    "rating":7,
+    "password":"password6"
+  },
+  {
+    "employeeId":7,
+    "name":"Remona Miramontes",
+    "position":"Cook",
+    "address":"Spring Garden",
+    "leavesTaken":8,
+    "rating":9,
+    "password":"password7"
+  },
+  {
+    "employeeId":8,
+    "name":"Kenton Cliff",
+    "position":"Side Cook",
+    "address":"Tower Rd",
+    "leavesTaken":9,
+    "rating":6,
+    "password":"password8"
+  },
+  {
+    "employeeId":9,
+    "name":"Wilfred Prideaux",
+    "position":"Supervisor",
+    "address":"South St",
+    "leavesTaken":0,
+    "rating":3,
+    "password":"password9"
+  },
+  {
+    "employeeId":10,
+    "name":"Fairy Towell",
+    "position":"Cashier",
+    "address":"South Park St",
+    "leavesTaken":9,
+    "rating":5,
+    "password":"password10"
+  },
+  {
+    "employeeId":11,
+    "name":"Belinda Burgo",
+    "position":"Cashier",
+    "address":"Barrington St",
+    "leavesTaken":8,
+    "rating":6,
+    "password":"password11"
+  },
+  {
+    "employeeId":12,
+    "name":"Armand Pero",
+    "position":"",
+    "address":"Tobin St",
+    "leavesTaken":6,
+    "rating":8,
+    "password":"password12"
+  },
+  {
+    "employeeId":13,
+    "name":"Jim Schatz",
+    "position":"Production Supervisor",
+    "address":"Spring Garden",
+    "leavesTaken":5,
+    "rating":5,
+    "password":"password13"
+  },
+  {
+    "employeeId":14,
+    "name":"Edra Dider",
+    "position":"",
+    "address":"Wellington St",
+    "leavesTaken":4,
+    "rating":4,
+    "password":"password14"
+  },
+  {
+    "employeeId":15,
+    "name":"Dwain Ruiz",
+    "position":"Cashier",
+    "address":"Clyde St",
+    "leavesTaken":3,
+    "rating":7,
+    "password":"password15"
+  },
+  {
+    "employeeId":16,
+    "name":"Sharell Whorton",
+    "position":"Cashier",
+    "address":"Cliff St",
+    "leavesTaken":2,
+    "rating":6,
+    "password":"password16"
+  },
+  {
+    "employeeId":17,
+    "name":"Cathern Newhouse",
+    "position":"Cashier",
+    "address":"Spring Garden",
+    "leavesTaken":3,
+    "rating":7,
+    "password":"password17"
+  },
+  {
+    "employeeId":18,
+    "name":"Tamekia Gazda",
+    "position":"Security",
+    "address":"South Park St",
+    "leavesTaken":11,
+    "rating":8,
+    "password":"password18"
+  },
+  {
+    "employeeId":20,
+    "name":"Sharilyn Budzinski",
+    "position":"Security",
+    "address":"South St",
+    "leavesTaken":7,
+    "rating":8,
+    "password":"password19"
+  }
+]

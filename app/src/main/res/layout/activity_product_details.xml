@@ -112,6 +112,7 @@
                     <com.easygo.rbcdev.easygo.widgets.SquareImageButton
                         android:id="@+id/btnNutritionIcon"
                         style="@style/HeaderIconButtonLeft"
+                        android:visibility="gone"
                         custom:matchDimension="height" >
                     </com.easygo.rbcdev.easygo.widgets.SquareImageButton>
                 </LinearLayout>

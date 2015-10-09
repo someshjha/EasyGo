@@ -138,7 +138,8 @@
         <activity android:name="com.ibm.mqa.ui.ProblemActivity" />
         <activity android:name="com.ibm.mqa.ui.FeedbackActivity" />
         <activity android:name="com.ibm.mqa.ui.ScreenshotEditorActivity" />
-
+        <activity android:name=".BusinessEnd.EmployeeEvalMain" >
+        </activity>
     </application>
 
 </manifest>
