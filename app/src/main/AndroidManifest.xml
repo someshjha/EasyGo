@@ -120,11 +120,13 @@
         <activity
             android:name=".BusinessEnd.ProgressReport"
             android:label="@string/title_activity_progress_report"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
             android:name=".BusinessEnd.QuaterlySales"
             android:label="@string/title_activity_quaterly_sales"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme" >
         </activity>
         <activity

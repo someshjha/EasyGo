@@ -22,12 +22,11 @@
         android:layout_marginTop="10dp">
 
 
-        <Spinner
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartAnnualSales"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/CategoryList"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="15dp"/>
+            android:layout_height="match_parent" />
+
 
 
     </LinearLayout>
